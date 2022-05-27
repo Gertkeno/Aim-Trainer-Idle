@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Assets/hand.png" type="Texture" id=1]
-[ext_resource path="res://Assets/mouse.png" type="Texture" id=3]
+[ext_resource path="res://assets/programmerArt/mouse.png" type="Texture" id=1]
+[ext_resource path="res://assets/programmerArt/hand.png" type="Texture" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
 
-[node name="Windows" type="Panel"]
+[node name="UI" type="Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
@@ -35,94 +36,211 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Button" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
-margin_right = 172.0
+margin_right = 171.0
 margin_bottom = 88.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "[Name]
+[Cost]
+[Description]"
+align = 1
+valign = 1
+
 [node name="Button2" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
 margin_top = 92.0
-margin_right = 172.0
+margin_right = 171.0
 margin_bottom = 181.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "[Name]
+[Cost]
+[Description]"
+align = 1
+valign = 1
+
 [node name="Button3" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
 margin_top = 185.0
-margin_right = 172.0
+margin_right = 171.0
 margin_bottom = 273.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "[Name]
+[Cost]
+[Description]"
+align = 1
+valign = 1
+
 [node name="Button4" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
 margin_top = 277.0
-margin_right = 172.0
+margin_right = 171.0
 margin_bottom = 366.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "[Name]
+[Cost]
+[Description]"
+align = 1
+valign = 1
+
 [node name="Button5" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
 margin_top = 370.0
-margin_right = 172.0
+margin_right = 171.0
 margin_bottom = 459.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "[Name]
+[Cost]
+[Description]"
+align = 1
+valign = 1
+
 [node name="Button6" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
 margin_top = 463.0
-margin_right = 172.0
+margin_right = 171.0
 margin_bottom = 551.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button6"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "[Name]
+[Cost]
+[Description]"
+align = 1
+valign = 1
+
 [node name="Button7" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
 margin_top = 555.0
-margin_right = 172.0
+margin_right = 171.0
 margin_bottom = 644.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button7"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "[Name]
+[Cost]
+[Description]"
+align = 1
+valign = 1
+
 [node name="Button8" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
 margin_top = 648.0
-margin_right = 172.0
+margin_right = 171.0
 margin_bottom = 736.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button8"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "[Name]
+[Cost]
+[Description]"
+align = 1
+valign = 1
+
 [node name="Button9" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
 margin_top = 740.0
-margin_right = 172.0
+margin_right = 171.0
 margin_bottom = 829.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button9"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "[Name]
+[Cost]
+[Description]"
+align = 1
+valign = 1
+
 [node name="Button10" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
 margin_top = 833.0
-margin_right = 172.0
+margin_right = 171.0
 margin_bottom = 922.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button10"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "[Name]
+[Cost]
+[Description]"
+align = 1
+valign = 1
+
 [node name="Button11" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
 margin_top = 926.0
-margin_right = 172.0
+margin_right = 171.0
 margin_bottom = 1014.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button11"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "[Name]
+[Cost]
+[Description]"
+align = 1
+valign = 1
+
 [node name="Button12" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
 margin_top = 1018.0
-margin_right = 172.0
+margin_right = 171.0
 margin_bottom = 1107.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button12"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "[Name]
+[Cost]
+[Description]"
+align = 1
+valign = 1
+
 [node name="Button13" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
 margin_top = 1111.0
-margin_right = 172.0
+margin_right = 171.0
 margin_bottom = 1200.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button13"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "[Name]
+[Cost]
+[Description]"
+align = 1
+valign = 1
 
 [node name="Upgrade Panel 2" type="Panel" parent="."]
 self_modulate = Color( 0, 1, 0.129412, 1 )
@@ -269,7 +387,7 @@ margin_left = 0.0879998
 margin_top = -0.04
 margin_right = -0.0879974
 margin_bottom = 0.0399933
-texture = ExtResource( 3 )
+texture = ExtResource( 1 )
 expand = true
 
 [node name="Hand Panel" type="Panel" parent="."]
@@ -300,7 +418,7 @@ margin_left = 0.0879998
 margin_top = -0.04
 margin_right = -0.0879974
 margin_bottom = 0.0399933
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 expand = true
 
 [node name="Aimtrain Panel" type="Panel" parent="."]
@@ -311,12 +429,22 @@ anchor_bottom = 1.0
 margin_left = 0.127991
 margin_right = -0.128052
 
-[node name="Example Window" type="Panel" parent="Aimtrain Panel"]
+[node name="ViewportContainer" type="ViewportContainer" parent="Aimtrain Panel"]
 anchor_left = 0.013
 anchor_top = 0.027
 anchor_right = 0.987
 anchor_bottom = 0.973
-margin_left = 0.0959997
+margin_left = 0.0960007
 margin_top = -0.200001
-margin_right = -0.0960083
+margin_right = -0.0959473
 margin_bottom = 0.199951
+stretch = true
+
+[node name="Viewport" type="Viewport" parent="Aimtrain Panel/ViewportContainer"]
+size = Vector2( 592, 567 )
+handle_input_locally = false
+keep_3d_linear = true
+render_target_update_mode = 3
+
+[node name="Player" parent="Aimtrain Panel/ViewportContainer/Viewport" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5, 1, 0 )

@@ -1,0 +1,6 @@
+[gd_scene format=2]
+
+[node name="CameraPivot" type="Position3D"]
+
+[node name="Camera" type="Camera" parent="."]
+fov = 90.0

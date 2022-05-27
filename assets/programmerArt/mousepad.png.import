@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mousepad.png-f4ee0416239d1be63e6041d6b05316bc.stex"
+path="res://.import/mousepad.png-2b6234246a0dc972f6ad3118cbab74bd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/mousepad.png"
-dest_files=[ "res://.import/mousepad.png-f4ee0416239d1be63e6041d6b05316bc.stex" ]
+source_file="res://assets/programmerArt/mousepad.png"
+dest_files=[ "res://.import/mousepad.png-2b6234246a0dc972f6ad3118cbab74bd.stex" ]
 
 [params]
 
