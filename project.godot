@@ -21,6 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Go_Godot_2022"
+run/main_scene="res://Purchasables.tscn"
 config/icon="res://icon.png"
 
 [debug]

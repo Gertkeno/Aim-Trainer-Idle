@@ -1,0 +1,28 @@
+[gd_scene format=2]
+
+[node name="Control" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_right = 239.0
+margin_bottom = 600.0
+scroll_horizontal_enabled = false
+
+[node name="ItemList" type="ItemList" parent="ScrollContainer"]
+
+[node name="ColorRect" type="ColorRect" parent="ScrollContainer/ItemList"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect2" type="ColorRect" parent="ScrollContainer/ItemList"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect3" type="ColorRect" parent="ScrollContainer/ItemList"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect4" type="ColorRect" parent="ScrollContainer/ItemList"]
+margin_right = 40.0
+margin_bottom = 40.0
