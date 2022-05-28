@@ -23,7 +23,7 @@ func _physics_process(_delta: float) -> void:
 		if Input.is_action_just_pressed("Click"):
 			var enemy = intersection.collider
 			print("Killed a mother fuckgerer!?", enemy.get_name())
-			enemy.get_parent().free()
+			enemy.get_parent().set_dead()
 		pos = Vector3(intersection.position)
 	else:
 		pos = rayEnd

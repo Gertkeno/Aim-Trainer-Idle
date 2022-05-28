@@ -16,3 +16,7 @@ transform = Transform( 0.193104, 0, 0.981178, 0, 1, 0, -0.981178, 0, 0.193104, -
 
 [node name="human2" parent="." instance=ExtResource( 3 )]
 transform = Transform( -0.510618, 0, 0.859808, 0, 1, 0, -0.859808, 0, -0.510618, -1.37991, 0.0621042, 1.3208 )
+
+[node name="human3" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.510618, 0, 0.859808, 0, 1, 0, -0.859808, 0, -0.510618, -1.37991, 0.0621042, 6.99512 )
+visible = false
