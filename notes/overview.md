@@ -16,3 +16,6 @@ date: Thu May 26 09:23:47 PM CDT 2022
 	- Moving
 	- Head shots
 - Sound effects [andre]
+
+- [ ] give them knives in they flailing hands
+- [ ] angry eyebrows

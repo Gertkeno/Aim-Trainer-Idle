@@ -1,4 +1,4 @@
-extends MeshInstance
+extends Spatial
 
 class_name Enemy
 
@@ -13,7 +13,7 @@ func respawn():
 	head.collision_layer = 2 # Layer 2 to be shootable
 	body.collision_layer = 2
 	self.visible = true
-	
+
 func set_dead():
 	head.collision_layer = 3 # layer 3 NOT shootable
 	body.collision_layer = 3

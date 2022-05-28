@@ -4,13 +4,13 @@
 [ext_resource path="res://AK/Scenes/AK.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemy.gd" type="Script" id=3]
 
-[sub_resource type="CapsuleShape" id=1]
+[sub_resource type="CapsuleShape" id=6]
 radius = 0.137748
 height = 0.122553
 
-[sub_resource type="CapsuleShape" id=2]
+[sub_resource type="CapsuleShape" id=7]
 radius = 0.248956
-height = 0.422248
+height = 1.21289
 
 [sub_resource type="CapsuleShape" id=4]
 radius = 0.0707824
@@ -35,14 +35,14 @@ collision_layer = 2
 
 [node name="Shape" type="CollisionShape" parent="Head"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0120821, 1.69241, -0.0238613 )
-shape = SubResource( 1 )
+shape = SubResource( 6 )
 
 [node name="Body" type="KinematicBody" parent="."]
 collision_layer = 2
 
 [node name="Body" type="CollisionShape" parent="Body"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0137064, 1.16538, -0.0411901 )
-shape = SubResource( 2 )
+shape = SubResource( 7 )
 
 [node name="penis" type="CollisionShape" parent="Body"]
 transform = Transform( 0.97756, 0.0902828, 0.190332, 0, 0.903507, -0.428572, -0.210659, 0.418955, 0.883232, 0.00474095, 0.892156, 0.193416 )
