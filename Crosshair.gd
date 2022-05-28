@@ -1,9 +1,9 @@
 extends Node2D
 
-onready var crosshairs = []
+onready var crosshairs: Array = []
 onready var sprite := $Sprite as Sprite
-var parentDirectory = "res://assets/kenney_crosshairPack/PNG/White/"
-var index = 0
+var parentDirectory := "res://assets/kenney_crosshairPack/PNG/White/"
+var index := 0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,11 +11,11 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	look_for_image_file(parentDirectory)
 
-func look_for_image_file(path):
-	var dir = Directory.new()
+func look_for_image_file(path: String):
+	var dir := Directory.new()
 	if dir.open(path) == OK:
 		dir.list_dir_begin()
-		var file_name = dir.get_next()
+		var file_name := dir.get_next()
 		while file_name != "":
 			if dir.current_is_dir():
 				pass
@@ -32,11 +32,12 @@ func look_for_image_file(path):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	self.position = self.get_global_mouse_position()
-	if(Input.is_action_just_pressed("ui_up")):
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_up"):
 		index += 1
-		var image = Image.new()
-		var texture = ImageTexture.new()
+		var image := Image.new()
+		var texture := ImageTexture.new()
 		image.load(parentDirectory + crosshairs[index])
 		texture.create_from_image(image)
 		sprite.set_texture(texture)
-
