@@ -18,3 +18,7 @@ func set_dead():
 	head.collision_layer = 3 # layer 3 NOT shootable
 	body.collision_layer = 3
 	self.visible = false
+
+func _process(_delta):
+	if(Input.is_action_just_pressed("Spacebar")):
+		respawn()
