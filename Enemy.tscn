@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://human.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://assets/human.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://AK/Scenes/AK.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.137748
@@ -24,9 +25,11 @@ height = 0.71759
 [node name="human" type="MeshInstance"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00214663, -2.98023e-08, -6.18696e-05 )
 mesh = ExtResource( 1 )
+skeleton = NodePath("")
 material/0 = null
 
 [node name="KinematicBody" type="KinematicBody" parent="."]
+collision_layer = 2
 
 [node name="Head" type="CollisionShape" parent="KinematicBody"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0120821, 1.69241, -0.0238613 )
@@ -51,3 +54,18 @@ shape = SubResource( 3 )
 [node name="Body3" type="CollisionShape" parent="KinematicBody"]
 transform = Transform( 0.986726, 7.09856e-09, -0.162396, 0.162396, -4.31311e-08, 0.986726, 0, -1, -4.37114e-08, 0.130709, 0.451288, -0.0238613 )
 shape = SubResource( 3 )
+
+[node name="AK" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.586514, 0.809939, 0, -0.809939, 0.586514, 0, 0, 0, 1, -0.122761, 1.34216, 0.117658 )
+
+[node name="AK2" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.713556, -0.700598, 0, -0.700598, 0.713556, 0, 0, 0, 1, 0.117377, 1.37821, -0.190423 )
+
+[node name="AK5" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.00519683, 0.133816, -0.990993, 0.999247, 0.0388064, 0, -0.0384568, 0.990246, 0.133917, -0.14341, 1.24202, -0.247434 )
+
+[node name="AK3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.00890145, -0.25904, -0.965826, -0.999606, -0.0280054, -0.00170159, -0.0266075, 0.965461, -0.259187, -0.293229, 0.848706, -0.0797045 )
+
+[node name="AK4" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.0166222, 0.184641, -0.982665, -0.999712, -0.0200657, 0.0131402, -0.0172916, 0.982601, 0.184921, 0.267076, 0.836335, -0.0797046 )
