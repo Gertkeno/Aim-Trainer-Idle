@@ -2,6 +2,9 @@ extends Spatial
 
 class_name Enemy
 
+var floating_text = preload("res://FloatingText.tscn")
+var targetValue = 1
+
 onready var head := $Head as KinematicBody
 onready var body := $Body as KinematicBody
 
@@ -17,6 +20,9 @@ func respawn():
 func set_dead():
 	head.collision_layer = 3 # layer 3 NOT shootable
 	body.collision_layer = 3
+	var text = floating_text.instance()
+	text.amount = targetValue
+	add_child(text)
 	self.visible = false
 
 func _process(_delta):

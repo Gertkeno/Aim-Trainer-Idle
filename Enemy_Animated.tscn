@@ -1,11 +1,9 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Material_001.material" type="Material" id=1]
 [ext_resource path="res://AK/GLTF/AkMaterial.material" type="Material" id=2]
 [ext_resource path="res://AK/Scenes/AK.tscn" type="PackedScene" id=3]
-[ext_resource path="res://AK/Materials/AK_2Material.tres" type="Material" id=4]
 [ext_resource path="res://Enemy.gd" type="Script" id=5]
-
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "meHumanMale.001"
@@ -282,7 +280,6 @@ shape = SubResource( 7 )
 transform = Transform( 0.97756, 0.0902828, 0.190332, 0, 0.903507, -0.428572, -0.210659, 0.418955, 0.883232, 0.00474095, 0.892156, 0.193416 )
 shape = SubResource( 4 )
 
-[node name="AK" type="MeshInstance" parent="." instance=ExtResource( 3 )]
+[node name="AK" parent="." instance=ExtResource( 3 )]
 transform = Transform( 0.586514, 0.809939, 0, -0.809939, 0.586514, 0, 0, 0, 1, -0.122761, 1.34216, 0.117658 )
 mesh = SubResource( 5 )
-material/0 = ExtResource( 4 )
