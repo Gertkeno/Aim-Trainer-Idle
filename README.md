@@ -4,6 +4,9 @@ Shoot enemies to upgrade your gamer set up.
 
 Made with Godot 3.4
 
+External assets are listed in [COPYRIGHT.md](COPYRIGHT.md "Copyright list") with
+original links and attribution.
+
 # The Big Todo
 
 - [ ] Purchasable UI
@@ -23,6 +26,8 @@ Made with Godot 3.4
 - [ ] Enemies
 	- [x] Model and Animation
 	- [x] can be shot
+	- [ ] Maybe 3 Weapons
+	- [ ] Angry eyebrows
 	- [ ] Spawn infinitely
 	- [ ] Movement
 	- [ ] Death effects

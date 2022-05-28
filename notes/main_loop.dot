@@ -1,4 +1,0 @@
-digraph main_loop {
-	click_heads -> get_money -> buy_upgrades -> get_swag;
-	buy_upgrades -> change_enemies;
-}
