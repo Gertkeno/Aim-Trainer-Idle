@@ -11,11 +11,11 @@ func _ready():
 	pass # Replace with function body.
 
 func _hit_enemy(hitbox: KinematicBody) -> void:
-	if hitbox == null or not hitbox.visible:
+	if hitbox == null:
 		return
 
 	var enemy := hitbox.get_parent() as Enemy
-	if enemy == null:
+	if enemy == null or not enemy.visible:
 		return
 
 	if hitbox.get_name() == "Head":
