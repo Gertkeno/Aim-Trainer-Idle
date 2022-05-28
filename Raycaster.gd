@@ -14,7 +14,7 @@ func _physics_process(_delta: float) -> void:
 	var space_state := get_world().direct_space_state
 	var mouse_position := get_viewport().get_mouse_position()
 	rayOrigin = camera.project_ray_origin(mouse_position)
-	rayEnd = rayOrigin + camera.project_ray_normal(mouse_position) * 8
+	rayEnd = rayOrigin + camera.project_ray_normal(mouse_position) * 50
 	var intersection := space_state.intersect_ray(rayOrigin, rayEnd, [], 2)
 
 	var pos: Vector3
@@ -24,7 +24,7 @@ func _physics_process(_delta: float) -> void:
 			var enemy := intersection.collider as KinematicBody
 			print("Killed a mother fuckgerer!?", enemy.get_name())
 			(enemy.get_parent() as Enemy).set_dead()
-		pos = Vector3(intersection.position)
+		pos = rayEnd
 	else:
 		pos = rayEnd
 

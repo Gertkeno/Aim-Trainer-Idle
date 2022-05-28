@@ -1,10 +1,11 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://assets/Material_001.material" type="Material" id=1]
+[ext_resource path="res://Material_001.material" type="Material" id=1]
 [ext_resource path="res://AK/GLTF/AkMaterial.material" type="Material" id=2]
 [ext_resource path="res://AK/Scenes/AK.tscn" type="PackedScene" id=3]
 [ext_resource path="res://AK/Materials/AK_2Material.tres" type="Material" id=4]
 [ext_resource path="res://Enemy.gd" type="Script" id=5]
+
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "meHumanMale.001"
