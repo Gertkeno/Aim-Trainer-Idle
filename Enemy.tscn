@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/human.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://AK/Scenes/AK.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Enemy.gd" type="Script" id=3]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.137748
@@ -27,6 +28,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00214663, -2.98023e-08, -6.1
 mesh = ExtResource( 1 )
 skeleton = NodePath("")
 material/0 = null
+script = ExtResource( 3 )
 
 [node name="Head" type="KinematicBody" parent="."]
 collision_layer = 2
