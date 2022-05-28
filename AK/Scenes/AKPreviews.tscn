@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://AK/Scenes/AK.tscn" type="PackedScene" id=1]
+[ext_resource path="res://AK/Scenes/BulletFired.tscn" type="PackedScene" id=2]
+[ext_resource path="res://AK/Scenes/Magazine.tscn" type="PackedScene" id=3]
+[ext_resource path="res://AK/Scenes/Bullet.tscn" type="PackedScene" id=4]
+[ext_resource path="res://AK/Scenes/BulletBox.tscn" type="PackedScene" id=5]
+
+[node name="AK" type="Spatial"]
+
+[node name="Magazine" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105564, 0, 0 )
+
+[node name="Bullet" parent="." instance=ExtResource( 4 )]
+
+[node name="BulletBox" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0818324, 0, 0 )
+
+[node name="BulletFired" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0396778, 0, 0 )
+
+[node name="AK" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.127404, -0.0848009 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.945348, 0, 0.326063, 0, 1, 0, -0.326063, 0, 0.945348, 0.42928, 0.146941, 0.368113 )
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( 0.800961, -0.226877, 0.554065, 0, 0.925421, 0.378939, -0.598716, -0.303516, 0.741227, 0.719401, 0.569703, 0.375069 )
+light_energy = 2.0
+
+[node name="SpotLight2" type="SpotLight" parent="."]
+transform = Transform( -0.782619, 0.304508, -0.542938, 0, 0.872189, 0.489169, 0.622501, 0.382833, -0.682592, -0.512469, 0.457754, -0.561821 )
+
+[node name="SpotLight3" type="SpotLight" parent="."]
+transform = Transform( -0.607001, -0.383518, 0.696034, 0, 0.875844, 0.482595, -0.794701, 0.292936, -0.531638, 1.07501, 0.769553, -0.587403 )

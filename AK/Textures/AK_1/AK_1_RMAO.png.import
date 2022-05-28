@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/WoodFloor041_1K_Color.jpg-11967809019fa0e3938ff17105925380.s3tc.stex"
-path.etc="res://.import/WoodFloor041_1K_Color.jpg-11967809019fa0e3938ff17105925380.etc.stex"
+path.s3tc="res://.import/AK_1_RMAO.png-f00d2f1983ce12b14308991a1575a221.s3tc.stex"
+path.etc="res://.import/AK_1_RMAO.png-f00d2f1983ce12b14308991a1575a221.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/WoodFloor041_1K_Color.jpg"
-dest_files=[ "res://.import/WoodFloor041_1K_Color.jpg-11967809019fa0e3938ff17105925380.s3tc.stex", "res://.import/WoodFloor041_1K_Color.jpg-11967809019fa0e3938ff17105925380.etc.stex" ]
+source_file="res://AK/Textures/AK_1/AK_1_RMAO.png"
+dest_files=[ "res://.import/AK_1_RMAO.png-f00d2f1983ce12b14308991a1575a221.s3tc.stex", "res://.import/AK_1_RMAO.png-f00d2f1983ce12b14308991a1575a221.etc.stex" ]
 
 [params]
 
@@ -25,7 +25,7 @@ flags/repeat=true
 flags/filter=true
 flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=1
+flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false

@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=2]
+
+[ext_resource path="res://AK/Materials/RMAo_Shader.tres" type="Shader" id=1]
+[ext_resource path="res://AK/Textures/Ammunition/Ammunition_Albedo.png" type="Texture" id=2]
+[ext_resource path="res://AK/Textures/Ammunition/Ammunition_RMAO.png" type="Texture" id=3]
+[ext_resource path="res://AK/Textures/Ammunition/Ammunition_Normal.png" type="Texture" id=4]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/Tiling = 1.0
+shader_param/Color = ExtResource( 2 )
+shader_param/RMAo = ExtResource( 3 )
+shader_param/Normal = ExtResource( 4 )

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/WoodFloor041_1K_Color.jpg-11967809019fa0e3938ff17105925380.s3tc.stex"
-path.etc="res://.import/WoodFloor041_1K_Color.jpg-11967809019fa0e3938ff17105925380.etc.stex"
+path.s3tc="res://.import/AK_2_Normal.png-89ff36bcefe8a6805e24b94c5aed07ca.s3tc.stex"
+path.etc="res://.import/AK_2_Normal.png-89ff36bcefe8a6805e24b94c5aed07ca.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/WoodFloor041_1K_Color.jpg"
-dest_files=[ "res://.import/WoodFloor041_1K_Color.jpg-11967809019fa0e3938ff17105925380.s3tc.stex", "res://.import/WoodFloor041_1K_Color.jpg-11967809019fa0e3938ff17105925380.etc.stex" ]
+source_file="res://AK/Textures/AK_2/AK_2_Normal.png"
+dest_files=[ "res://.import/AK_2_Normal.png-89ff36bcefe8a6805e24b94c5aed07ca.s3tc.stex", "res://.import/AK_2_Normal.png-89ff36bcefe8a6805e24b94c5aed07ca.etc.stex" ]
 
 [params]
 
@@ -20,12 +20,12 @@ compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
-compress/normal_map=0
+compress/normal_map=1
 flags/repeat=true
 flags/filter=true
 flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=1
+flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false

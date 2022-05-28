@@ -1,6 +1,19 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
 
-[node name="CameraPivot" type="Position3D"]
+[ext_resource path="res://AK/Scenes/AK.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Raycaster.gd" type="Script" id=2]
 
-[node name="Camera" type="Camera" parent="."]
-fov = 90.0
+[node name="Player" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="CameraPivot" type="Position3D" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
+
+[node name="Camera" type="Camera" parent="CameraPivot"]
+
+[node name="GunPivot" type="Spatial" parent="."]
+transform = Transform( -5.46392e-08, 0, 1.25, 0, 1.25, 0, -1.25, 0, -5.46392e-08, -0.569, -0.458, 0 )
+
+[node name="AK" parent="GunPivot" instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
+skeleton = NodePath("../..")

@@ -31,7 +31,6 @@ ground_bottom_color = Color( 0.321569, 0.482353, 0.639216, 1 )
 ground_horizon_color = Color( 1, 0.980392, 0.964706, 1 )
 
 [sub_resource type="Environment" id=5]
-resource_local_to_scene = true
 background_mode = 2
 background_sky = SubResource( 4 )
 
