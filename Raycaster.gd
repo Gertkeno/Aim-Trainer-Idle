@@ -2,43 +2,43 @@ extends Spatial
 
 class_name PlayerGun
 
-onready var camera: Camera = $CameraPivot/Camera
-var rayOrigin := Vector3()
+export (float, 5, 200) var rayLength := 50
+onready var camera := $CameraPivot/Camera as Camera
 var rayEnd := Vector3()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
+func _hit_enemy(hitbox: KinematicBody) -> void:
+	if hitbox == null or not hitbox.visible:
+		return
+
+	var enemy := hitbox.get_parent() as Enemy
+	if enemy == null:
+		return
+
+	if hitbox.get_name() == "Head":
+		print("Headshot")
+	else:
+		print("Bodyshot")
+
+	enemy.set_dead(2 if (hitbox.get_name() == "Head") else 1)
+
 func _physics_process(_delta: float) -> void:
 	var space_state := get_world().direct_space_state
 	var mouse_position := get_viewport().get_mouse_position()
-	rayOrigin = camera.project_ray_origin(mouse_position)
-	rayEnd = rayOrigin + camera.project_ray_normal(mouse_position) * 50
+	var rayOrigin := camera.project_ray_origin(mouse_position)
+	rayEnd = rayOrigin + camera.project_ray_normal(mouse_position) * rayLength
 	var intersection := space_state.intersect_ray(rayOrigin, rayEnd, [], 2)
-
-	var pos: Vector3
 
 	if not intersection.empty():
 		if Input.is_action_just_pressed("Click"):
-			var enemy := intersection.collider as KinematicBody
-			print("Killed a mother fuckgerer!?", enemy.get_name())
-			(enemy.get_parent() as Enemy).set_dead()
-		pos = rayEnd
-	else:
-		pos = rayEnd
+			_hit_enemy(intersection.collider)
 
-	($GunPivot as Spatial).look_at(pos, Vector3(0,1,0))
+	($GunPivot as Spatial).look_at(rayEnd, Vector3(0,1,0))
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Click"):
 		pass
 
-var inViewport := false
-
-func _on_ViewportContainer_mouse_entered() -> void:
-	inViewport = true
-
-
-func _on_ViewportContainer_mouse_exited() -> void:
-	inViewport = false

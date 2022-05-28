@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/human.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://AK/Scenes/AK.tscn" type="PackedScene" id=2]
@@ -9,19 +9,8 @@ radius = 0.137748
 height = 0.122553
 
 [sub_resource type="CapsuleShape" id=7]
-radius = 0.248956
+radius = 0.263671
 height = 1.21289
-
-[sub_resource type="CapsuleShape" id=4]
-radius = 0.0707824
-height = 0.271376
-
-[sub_resource type="SphereShape" id=5]
-radius = 0.0887584
-
-[sub_resource type="CapsuleShape" id=3]
-radius = 0.0841003
-height = 0.71759
 
 [node name="human" type="MeshInstance"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00214663, -2.98023e-08, -6.18696e-05 )
@@ -41,24 +30,8 @@ shape = SubResource( 6 )
 collision_layer = 2
 
 [node name="Body" type="CollisionShape" parent="Body"]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0137064, 1.16538, -0.0411901 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0137064, 0.758376, -0.0411901 )
 shape = SubResource( 7 )
-
-[node name="penis" type="CollisionShape" parent="Body"]
-transform = Transform( 0.97756, 0.0902828, 0.190332, 0, 0.903507, -0.428572, -0.210659, 0.418955, 0.883232, 0.00474095, 0.892156, 0.193416 )
-shape = SubResource( 4 )
-
-[node name="penis2" type="CollisionShape" parent="Body"]
-transform = Transform( 0.97756, 0.0902828, 0.190332, 0, 0.903507, -0.428572, -0.210659, 0.418955, 0.883232, -0.0368526, 0.853879, 0.0586761 )
-shape = SubResource( 5 )
-
-[node name="Body2" type="CollisionShape" parent="Body"]
-transform = Transform( 0.994344, -4.64267e-09, 0.106212, -0.106212, -4.34641e-08, 0.994344, 0, -1, -4.37114e-08, -0.167521, 0.451288, -0.0238613 )
-shape = SubResource( 3 )
-
-[node name="Body3" type="CollisionShape" parent="Body"]
-transform = Transform( 0.986726, 7.09856e-09, -0.162396, 0.162396, -4.31311e-08, 0.986726, 0, -1, -4.37114e-08, 0.130709, 0.451288, -0.0238613 )
-shape = SubResource( 3 )
 
 [node name="AK" parent="." instance=ExtResource( 2 )]
 transform = Transform( 0.586514, 0.809939, 0, -0.809939, 0.586514, 0, 0, 0, 1, -0.122761, 1.34216, 0.117658 )

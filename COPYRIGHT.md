@@ -4,3 +4,4 @@
   [TheLoafbrr](https://twitter.com/TheLoafbrr)
 - [Crosshairs](https://kenney.nl/assets/crosshair-pack "CC0") By
   [Kenney](https://www.patreon.com/kenney)
+- [Fonts](https://godotengine.org/asset-library/asset/316 "MIT") By dalton5000
