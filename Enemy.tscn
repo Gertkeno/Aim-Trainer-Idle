@@ -28,30 +28,33 @@ mesh = ExtResource( 1 )
 skeleton = NodePath("")
 material/0 = null
 
-[node name="KinematicBody" type="KinematicBody" parent="."]
+[node name="Head" type="KinematicBody" parent="."]
 collision_layer = 2
 
-[node name="Head" type="CollisionShape" parent="KinematicBody"]
+[node name="Shape" type="CollisionShape" parent="Head"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0120821, 1.69241, -0.0238613 )
 shape = SubResource( 1 )
 
-[node name="Body" type="CollisionShape" parent="KinematicBody"]
+[node name="Body" type="KinematicBody" parent="."]
+collision_layer = 2
+
+[node name="Body" type="CollisionShape" parent="Body"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0137064, 1.16538, -0.0411901 )
 shape = SubResource( 2 )
 
-[node name="penis" type="CollisionShape" parent="KinematicBody"]
+[node name="penis" type="CollisionShape" parent="Body"]
 transform = Transform( 0.97756, 0.0902828, 0.190332, 0, 0.903507, -0.428572, -0.210659, 0.418955, 0.883232, 0.00474095, 0.892156, 0.193416 )
 shape = SubResource( 4 )
 
-[node name="penis2" type="CollisionShape" parent="KinematicBody"]
+[node name="penis2" type="CollisionShape" parent="Body"]
 transform = Transform( 0.97756, 0.0902828, 0.190332, 0, 0.903507, -0.428572, -0.210659, 0.418955, 0.883232, -0.0368526, 0.853879, 0.0586761 )
 shape = SubResource( 5 )
 
-[node name="Body2" type="CollisionShape" parent="KinematicBody"]
+[node name="Body2" type="CollisionShape" parent="Body"]
 transform = Transform( 0.994344, -4.64267e-09, 0.106212, -0.106212, -4.34641e-08, 0.994344, 0, -1, -4.37114e-08, -0.167521, 0.451288, -0.0238613 )
 shape = SubResource( 3 )
 
-[node name="Body3" type="CollisionShape" parent="KinematicBody"]
+[node name="Body3" type="CollisionShape" parent="Body"]
 transform = Transform( 0.986726, 7.09856e-09, -0.162396, 0.162396, -4.31311e-08, 0.986726, 0, -1, -4.37114e-08, 0.130709, 0.451288, -0.0238613 )
 shape = SubResource( 3 )
 

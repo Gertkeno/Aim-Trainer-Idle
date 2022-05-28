@@ -14,13 +14,16 @@ func _physics_process(_delta: float) -> void:
 	var space_state := get_world().direct_space_state
 	var mouse_position := get_viewport().get_mouse_position()
 	rayOrigin = camera.project_ray_origin(mouse_position)
-	rayEnd = rayOrigin + camera.project_ray_normal(mouse_position) * 2000
+	rayEnd = rayOrigin + camera.project_ray_normal(mouse_position) * 8
 	var intersection := space_state.intersect_ray(rayOrigin, rayEnd, [], 2)
 
 	var pos: Vector3
 
 	if not intersection.empty():
-		print("not empty!", intersection.position)
+		if Input.is_action_just_pressed("Click"):
+			var enemy = intersection.collider
+			print("Killed a mother fuckgerer!?", enemy.get_name())
+			enemy.get_parent().free()
 		pos = Vector3(intersection.position)
 	else:
 		pos = rayEnd
