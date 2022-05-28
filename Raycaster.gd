@@ -18,12 +18,15 @@ func _hit_enemy(hitbox: KinematicBody) -> void:
 	if enemy == null or not enemy.visible:
 		return
 
+	var value: int
 	if hitbox.get_name() == "Head":
 		print("Headshot")
+		value = 2
 	else:
 		print("Bodyshot")
+		value = 1
 
-	enemy.set_dead(2 if (hitbox.get_name() == "Head") else 1)
+	enemy.set_dead(value)
 
 func _physics_process(_delta: float) -> void:
 	var space_state := get_world().direct_space_state

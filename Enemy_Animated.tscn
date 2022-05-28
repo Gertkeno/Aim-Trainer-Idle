@@ -231,7 +231,7 @@ bones/1/name = "Hip"
 bones/1/parent = 0
 bones/1/rest = Transform( 1, 2.90992e-14, -1.74067e-16, -1.15425e-10, 0.999026, -0.0441263, -1.33253e-08, 0.0441263, 0.999026, 3.72527e-09, -8.9407e-08, -0.614867 )
 bones/1/enabled = true
-bones/1/bound_children = [  ]
+bones/1/bound_children = [ NodePath("hipAttachment") ]
 bones/2/name = "Thigh.Right"
 bones/2/parent = 1
 bones/2/rest = Transform( -0.945162, 0.309841, 0.103279, -0.310721, -0.950468, 0.00786368, 0.1006, -0.0246586, 0.994621, -0.198623, -0.0236119, -0.474929 )
@@ -286,7 +286,7 @@ bones/12/name = "Hand.Right"
 bones/12/parent = 11
 bones/12/rest = Transform( 0.999528, -0.0171325, 0.0254783, 0.0176391, 0.999648, -0.0197944, -0.0251303, 0.0202345, 0.99948, -1.49012e-07, -2.98023e-08, -0.495622 )
 bones/12/enabled = true
-bones/12/bound_children = [ NodePath("BoneAttachment") ]
+bones/12/bound_children = [ NodePath("rhandAttachment") ]
 bones/13/name = "Fingers1.Right"
 bones/13/parent = 12
 bones/13/rest = Transform( 0.996751, 0.0701235, 0.039627, -0.0727697, 0.994901, 0.0698359, -0.0345278, -0.0724927, 0.996771, -4.76837e-07, -8.9407e-08, -0.224584 )
@@ -311,7 +311,7 @@ bones/17/name = "Head"
 bones/17/parent = 0
 bones/17/rest = Transform( 1, -2.53933e-07, 2.39365e-08, -2.49292e-07, -0.989248, 0.146247, -8.14374e-08, -0.146247, -0.989248, -1.00583e-07, -0.0517109, 0.111214 )
 bones/17/enabled = true
-bones/17/bound_children = [ NodePath("BoneAttachment2") ]
+bones/17/bound_children = [ NodePath("headAttachment") ]
 bones/18/name = "Upperarm.Left"
 bones/18/parent = 0
 bones/18/rest = Transform( 0.0104544, 0.069339, -0.997538, -0.01661, -0.997443, -0.0695065, -0.999808, 0.0172958, -0.00927597, 0.345036, 0.0384471, -0.0612942 )
@@ -352,21 +352,30 @@ bones/24/bound_children = [  ]
 mesh = SubResource( 1 )
 material/0 = null
 
-[node name="BoneAttachment" type="BoneAttachment" parent="MaleArm2"]
-transform = Transform( -0.799274, 0.327802, -0.503693, 0.572149, 0.158639, -0.804661, -0.183863, -0.931332, -0.314348, -0.474895, 0.328984, 1.06205 )
+[node name="rhandAttachment" type="BoneAttachment" parent="MaleArm2"]
+transform = Transform( -0.749352, 0.327222, -0.57567, 0.592087, -0.0581439, -0.803774, -0.296484, -0.943156, -0.150174, -0.4268, 0.407155, 0.845479 )
 bone_name = "Hand.Right"
 
-[node name="AK2" parent="MaleArm2/BoneAttachment" instance=ExtResource( 3 )]
+[node name="AK2" parent="MaleArm2/rhandAttachment" instance=ExtResource( 3 )]
 transform = Transform( 0.139463, 0.13936, 1.99027, 0.114614, 1.99127, -0.147458, -1.99184, 0.124335, 0.130862, -0.0640353, 0.0623603, -0.268362 )
 mesh = SubResource( 5 )
 skeleton = NodePath("../../..")
 
-[node name="BoneAttachment2" type="BoneAttachment" parent="MaleArm2"]
-transform = Transform( 1, -2.53931e-07, 5.22774e-08, 2.55059e-07, 0.995586, -0.0938477, 2.40428e-08, 0.0938477, 0.995586, 0.00237558, -0.102596, 0.174051 )
+[node name="headAttachment" type="BoneAttachment" parent="MaleArm2"]
+transform = Transform( 1, -2.53931e-07, 5.22774e-08, 2.55059e-07, 0.995586, -0.0938477, 2.40428e-08, 0.0938477, 0.995586, 0.0358277, -0.126315, 0.0756586 )
 bone_name = "Head"
 
-[node name="AK2" parent="MaleArm2/BoneAttachment2" instance=ExtResource( 3 )]
+[node name="AK2" parent="MaleArm2/headAttachment" instance=ExtResource( 3 )]
 transform = Transform( -9.23757e-07, 1.99449, 0.148392, -0.187695, -0.147738, 1.98569, -1.99117, 0.0139252, -0.187178, 0.024134, -0.21608, 0.844446 )
+mesh = SubResource( 5 )
+skeleton = NodePath("../../..")
+
+[node name="hipAttachment" type="BoneAttachment" parent="MaleArm2"]
+transform = Transform( 1, 7.02983e-10, 1.59185e-08, 8.18345e-10, -0.999963, -0.00864669, 1.33006e-08, 0.00864669, -0.999963, 0.043524, -0.116341, 0.75549 )
+bone_name = "Hip"
+
+[node name="AK" parent="MaleArm2/hipAttachment" instance=ExtResource( 3 )]
+transform = Transform( 1.02856, 1.69312, -0.274595, -0.167742, -0.219357, -1.98085, -1.70703, 1.04174, 0.0291936, -0.370227, -0.262325, 0.469534 )
 mesh = SubResource( 5 )
 skeleton = NodePath("../../..")
 
@@ -383,10 +392,6 @@ collision_layer = 2
 [node name="Body" type="CollisionShape" parent="Body"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0137064, 0.737963, -0.0411901 )
 shape = SubResource( 7 )
-
-[node name="AK" parent="." instance=ExtResource( 3 )]
-transform = Transform( 0.586514, 0.809939, 0, -0.809939, 0.586514, 0, 0, 0, 1, -0.122761, 1.34216, 0.117658 )
-mesh = SubResource( 5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "default"
