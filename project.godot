@@ -12,12 +12,12 @@ _global_script_classes=[ {
 "base": "Spatial",
 "class": "Enemy",
 "language": "GDScript",
-"path": "res://Enemy.gd"
+"path": "res://Enemy/Enemy.gd"
 }, {
 "base": "Position2D",
 "class": "FloatingText",
 "language": "GDScript",
-"path": "res://FloatingText.gd"
+"path": "res://Enemy/FloatingText.gd"
 }, {
 "base": "",
 "class": "GitAPI",
@@ -27,7 +27,7 @@ _global_script_classes=[ {
 "base": "Spatial",
 "class": "PlayerGun",
 "language": "GDScript",
-"path": "res://Raycaster.gd"
+"path": "res://Player/Raycaster.gd"
 } ]
 _global_script_class_icons={
 "Enemy": "",
@@ -60,7 +60,7 @@ layer=false
 
 [input]
 
-Click={
+Fire={
 "deadzone": 0.5,
 "events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
  ]

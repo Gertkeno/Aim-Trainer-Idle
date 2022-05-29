@@ -14,11 +14,11 @@ dest_files=[ "res://.import/crosshair176.png-8ee61e7bc395a0f7b77af6d1413c3142.st
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
-compress/normal_map=0
+compress/normal_map=2
 flags/repeat=0
 flags/filter=true
 flags/mipmaps=false
