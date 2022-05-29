@@ -42,6 +42,10 @@ config/name="Aim Trainer Idle"
 config/description="**Evolve** your gamer gear and enemies"
 run/main_scene="res://Main.tscn"
 
+[autoload]
+
+Stats="*res://Player/Stats.gd"
+
 [debug]
 
 gdscript/warnings/treat_warnings_as_errors=true

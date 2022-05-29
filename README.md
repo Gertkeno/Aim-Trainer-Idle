@@ -18,10 +18,11 @@ original links and attribution.
 	- [ ] Headshot ding
 	- [ ] Kill/Gain money
 - [ ] Shooting
-	- [ ] Aimbot
+	- [ ] Aim-bot
+	- [ ] Aim-bot toggle
 	- [x] Manual
 	- [x] Cross hair
-	- [ ] Editable stats
+	- [x] Editable stats
 	- [ ] Muzzle flash and kick back
 - [ ] Enemies
 	- [x] Model and Animation
@@ -33,9 +34,12 @@ original links and attribution.
 	- [ ] Death effects
 	- [ ] Editable stats
 - [ ] Stats
-	- [ ] Fire rate
+	- [x] Fire rate
 	- [ ] Enemy spawn rate
 	- [ ] Bullet magnetism
+	- [x] Dosh per kill
+	- [x] Dosh per head shot
+	- [ ] aim-bot speed
 - [ ] Economy
-	- [ ] Gain money
+	- [x] Get money
 	- [ ] Spend money

@@ -4,7 +4,7 @@ class_name FloatingText
 
 onready var label := $Label as Label
 onready var tween := $Tween as Tween
-var amount := 0
+var amount: float = 0
 
 func _ready():
 	label.set_text(str(amount))
