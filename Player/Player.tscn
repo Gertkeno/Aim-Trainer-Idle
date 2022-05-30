@@ -13,18 +13,18 @@ tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/keys = PoolRealArray( 0.00466507, 1, 0, 0, 0, 0, 0.707107, 0, 0.707107, 1, 1, 1, 0.0902539, 1, 0, 0, 0.394, 0, 0.707, 0, 0.707, 1, 1, 1, 0.283051, 1, 0, 0, 0, 0, 0.707107, 0, 0.707107, 1, 1, 1 )
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0.707107, 0, 0.707107, 1, 1, 1, 0.0366302, 1, 0, 0, 0.174, 0, 0.707, 0, 0.707, 1, 1, 1, 0.19808, 1, 0, 0, 0.051, 0, 0.707107, 0, 0.707107, 1, 1, 1, 0.283051, 1, 0, 0, 0, 0, 0.707107, 0, 0.707107, 1, 1, 1 )
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite3D:opacity")
-tracks/1/interp = 1
+tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.00288591, 0.110483 ),
-"transitions": PoolRealArray( 1, 1.7411 ),
-"update": 0,
-"values": [ 1.0, 0.0 ]
+"times": PoolRealArray( 0.00108498, 0.067535 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0.75, 0.0 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Sprite3D/OmniLight:light_energy")
@@ -33,10 +33,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.00147765, 0.141499 ),
+"times": PoolRealArray( 0.00147765, 0.141799 ),
 "transitions": PoolRealArray( 2.2974, 1 ),
 "update": 0,
-"values": [ 14.2, 0.0 ]
+"values": [ 4.449, 0.0 ]
 }
 
 [node name="Player" type="Spatial"]
@@ -59,7 +59,7 @@ skeleton = NodePath("../..")
 anims/Fire = SubResource( 1 )
 
 [node name="Sprite3D" type="Sprite3D" parent="GunPivot"]
-transform = Transform( 0.056636, 0, -4.12357e-08, 0, 0.056636, 0, -4.12357e-08, 0, 1, 0.00386677, 0.100244, -0.649421 )
+transform = Transform( 0.056636, 0, -4.12357e-08, 0, 0.056636, 0, -4.12357e-08, 0, 1, 0.00386677, 0.100244, -0.618116 )
 opacity = 0.0
 texture = ExtResource( 3 )
 hframes = 4

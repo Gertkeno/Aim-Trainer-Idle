@@ -1,12 +1,11 @@
 extends Spatial
 
-class_name PlayerGun
-
 export (float, 5, 200) var rayLength := 50
+export (int, LAYERS_3D_PHYSICS) var rayhit: int = 2
 onready var camera := $CameraPivot/Camera as Camera
 onready var gun := $GunPivot/AK as Spatial
 onready var gunAnimation := $GunPivot/AnimationPlayer as AnimationPlayer
-var shootCooldown: float = Stats.get_fire_delay()
+var shootCooldown: float = 1 / Stats.fireDelay
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,7 +21,6 @@ func _hit_enemy(hitbox: KinematicBody) -> bool:
 
 	var value: float = Stats.targetWorth
 	if hitbox.get_name() == "Head":
-		print("Headshot")
 		value *= Stats.headshotMultiplier
 
 	enemy.set_dead(value)
@@ -33,16 +31,17 @@ func _process(delta: float) -> void:
 	var mouse_position := get_viewport().get_mouse_position()
 	var rayOrigin := camera.project_ray_origin(mouse_position)
 	var rayEnd := rayOrigin + camera.project_ray_normal(mouse_position) * rayLength
-	var intersection := space_state.intersect_ray(rayOrigin, rayEnd, [], 2)
+	var intersection := space_state.intersect_ray(rayOrigin, rayEnd, [], rayhit)
 
 	shootCooldown += delta
-	if Input.is_action_pressed("Fire") and shootCooldown > Stats.get_fire_delay():
+	if Input.is_action_pressed("Fire") and shootCooldown > 1 / Stats.fireDelay:
 		if not intersection.empty():
 			if _hit_enemy(intersection.collider):
 				# do Juicy Fx
 				pass
 		shootCooldown = 0
 		($GunPivot/Sprite3D as Sprite3D).frame = randi() % 15 + 1
+		gunAnimation.stop()
 		gunAnimation.play("Fire")
 
 	($GunPivot as Spatial).look_at(rayEnd, Vector3(0,1,0))

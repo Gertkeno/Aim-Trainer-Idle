@@ -17,12 +17,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0252061, 0.0621018, -0.0280
 transform = Transform( 0.193104, 0, 0.981178, 0, 1, 0, -0.981178, 0, 0.193104, -1.13329, 0.0621042, -1.61797 )
 
 [node name="human2" parent="." instance=ExtResource( 3 )]
-transform = Transform( -0.510618, 0, 0.859808, 0, 1, 0, -0.859808, 0, -0.510618, -1.37991, 0.0621042, 1.3208 )
+transform = Transform( -0.510618, 0, 0.859808, 0, 1, 0, -0.859808, 0, -0.510618, -1.31888, 0.0621042, 1.54304 )
 
 [node name="human3" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.49994, 0, 0.86606, 0, 1, 0, -0.86606, 0, 0.49994, -1.4902, 0.062109, -0.540645 )
 
 [node name="human4" parent="." instance=ExtResource( 4 )]
-transform = Transform( -0.730674, 0, 0.682726, 0, 1, 0, -0.682726, 0, -0.730674, -5.21504, 0.0621088, 1.57005 )
+transform = Transform( -0.730674, 0, 0.682726, 0, 1, 0, -0.682726, 0, -0.730674, -9.08489, 0.0621088, 2.80611 )
 
 [node name="Crosshair" parent="." instance=ExtResource( 5 )]

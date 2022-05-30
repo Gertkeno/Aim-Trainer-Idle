@@ -24,16 +24,16 @@ _global_script_classes=[ {
 "language": "NativeScript",
 "path": "res://addons/godot-git-plugin/git_api.gdns"
 }, {
-"base": "Spatial",
-"class": "PlayerGun",
+"base": "Button",
+"class": "Purchaseable",
 "language": "GDScript",
-"path": "res://Player/Raycaster.gd"
+"path": "res://Player/PurchaseableButton.gd"
 } ]
 _global_script_class_icons={
 "Enemy": "",
 "FloatingText": "",
 "GitAPI": "",
-"PlayerGun": ""
+"Purchaseable": ""
 }
 
 [application]

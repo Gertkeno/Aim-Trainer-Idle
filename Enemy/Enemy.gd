@@ -12,13 +12,13 @@ func _ready():
 	pass # Replace with function body.
 
 func respawn():
-	head.collision_layer = 2 # Layer 2 to be shootable
-	body.collision_layer = 2
+	head.collision_layer = 0x2 # Layer 2 to be shootable
+	body.collision_layer = 0x2
 	self.visible = true
 
 func set_dead(value: float):
-	head.collision_layer = 3 # layer 3 NOT shootable
-	body.collision_layer = 3
+	head.collision_layer = 0x4 # layer 3 NOT shootable
+	body.collision_layer = 0x4
 	var text := floating_text.instance() as FloatingText
 	text.amount = value
 	add_child(text)

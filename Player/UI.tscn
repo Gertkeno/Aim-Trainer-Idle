@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/programmerArt/mouse.png" type="Texture" id=1]
 [ext_resource path="res://assets/programmerArt/hand.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/ui_theme.tres" type="Theme" id=4]
 [ext_resource path="res://Player/DoshCounter.gd" type="Script" id=5]
 [ext_resource path="res://assets/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/cmu-typewriter/Typewriter/cmuntt.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Player/Purchaseable.tscn" type="PackedScene" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -26,231 +27,47 @@ margin_right = 0.127991
 margin_bottom = -3.05176e-05
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Upgrade Panel 1"]
-anchor_left = 0.077
-anchor_top = 0.035
-anchor_right = 0.962
-anchor_bottom = 0.982
-margin_left = -0.0160007
-margin_top = 0.04
-margin_right = -0.0960083
-margin_bottom = 0.207977
+anchor_left = 0.0769231
+anchor_top = 0.0350877
+anchor_right = 0.961538
+anchor_bottom = 0.982456
 size_flags_horizontal = 3
 size_flags_vertical = 3
 scroll_horizontal_enabled = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Upgrade Panel 1/ScrollContainer"]
-margin_right = 172.0
-margin_bottom = 1200.0
-rect_min_size = Vector2( 0, 1200 )
+margin_right = 184.0
+margin_bottom = 432.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
-margin_right = 171.0
-margin_bottom = 88.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
+margin_right = 183.0
+size_flags_vertical = 1
+statName = "fireDelay"
+displayName = "Fire Rate"
+costScalingType = 0
+costScalingRate = 2.0
+bonusValue = 0.1
 
-[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-text = "[Name]
-[Cost]
-[Description]"
-align = 1
-valign = 1
-
-[node name="Button2" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
+[node name="Button2" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
 margin_top = 92.0
-margin_right = 171.0
-margin_bottom = 181.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+margin_right = 183.0
+margin_bottom = 180.0
+size_flags_vertical = 1
+statName = "targetWorth"
+displayName = "Enemy Worth"
 
-[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button2"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-text = "[Name]
-[Cost]
-[Description]"
-align = 1
-valign = 1
-
-[node name="Button3" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
-margin_top = 185.0
-margin_right = 171.0
-margin_bottom = 273.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button3"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-text = "[Name]
-[Cost]
-[Description]"
-align = 1
-valign = 1
-
-[node name="Button4" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
-margin_top = 277.0
-margin_right = 171.0
-margin_bottom = 366.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button4"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-text = "[Name]
-[Cost]
-[Description]"
-align = 1
-valign = 1
-
-[node name="Button5" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
-margin_top = 370.0
-margin_right = 171.0
-margin_bottom = 459.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button5"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-text = "[Name]
-[Cost]
-[Description]"
-align = 1
-valign = 1
-
-[node name="Button6" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
-margin_top = 463.0
-margin_right = 171.0
-margin_bottom = 551.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button6"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-text = "[Name]
-[Cost]
-[Description]"
-align = 1
-valign = 1
-
-[node name="Button7" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
-margin_top = 555.0
-margin_right = 171.0
-margin_bottom = 644.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button7"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-text = "[Name]
-[Cost]
-[Description]"
-align = 1
-valign = 1
-
-[node name="Button8" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
-margin_top = 648.0
-margin_right = 171.0
-margin_bottom = 736.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button8"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-text = "[Name]
-[Cost]
-[Description]"
-align = 1
-valign = 1
-
-[node name="Button9" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
-margin_top = 740.0
-margin_right = 171.0
-margin_bottom = 829.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button9"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-text = "[Name]
-[Cost]
-[Description]"
-align = 1
-valign = 1
-
-[node name="Button10" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
-margin_top = 833.0
-margin_right = 171.0
-margin_bottom = 922.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button10"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-text = "[Name]
-[Cost]
-[Description]"
-align = 1
-valign = 1
-
-[node name="Button11" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
-margin_top = 926.0
-margin_right = 171.0
-margin_bottom = 1014.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button11"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-text = "[Name]
-[Cost]
-[Description]"
-align = 1
-valign = 1
-
-[node name="Button12" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
-margin_top = 1018.0
-margin_right = 171.0
-margin_bottom = 1107.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button12"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-text = "[Name]
-[Cost]
-[Description]"
-align = 1
-valign = 1
-
-[node name="Button13" type="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer"]
-margin_top = 1111.0
-margin_right = 171.0
-margin_bottom = 1200.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Label" type="Label" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button13"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-text = "[Name]
-[Cost]
-[Description]"
-align = 1
-valign = 1
+[node name="Button3" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 184.0
+margin_right = 183.0
+margin_bottom = 272.0
+size_flags_vertical = 1
+statName = "headshotMultiplier"
+displayName = "Headshot Bonus"
+baseCost = 3.0
+costScalingRate = 1.4
+bonusValue = 0.1
 
 [node name="Upgrade Panel 2" type="Control" parent="."]
 self_modulate = Color( 0, 1, 0.129412, 1 )
@@ -387,6 +204,7 @@ margin_left = -0.0160007
 margin_top = -0.0640001
 margin_right = -0.0960083
 margin_bottom = -0.0160065
+focus_mode = 0
 
 [node name="TextureRect" type="TextureRect" parent="Mouse Panel/Button"]
 anchor_left = 0.043
@@ -418,6 +236,7 @@ margin_left = 0.0159998
 margin_top = -0.0640001
 margin_right = -0.0160065
 margin_bottom = -0.0160065
+focus_mode = 0
 
 [node name="TextureRect" type="TextureRect" parent="Hand Panel/Button"]
 anchor_left = 0.043
