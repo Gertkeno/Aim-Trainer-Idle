@@ -23,7 +23,7 @@ original links and attribution.
 	- [x] Manual
 	- [x] Cross hair
 	- [x] Editable stats
-	- [ ] Muzzle flash and kick back
+	- [x] Muzzle flash and kick back
 - [ ] Enemies
 	- [x] Model and Animation
 	- [x] can be shot

@@ -4,6 +4,8 @@ class_name PlayerGun
 
 export (float, 5, 200) var rayLength := 50
 onready var camera := $CameraPivot/Camera as Camera
+onready var gun := $GunPivot/AK as Spatial
+onready var gunAnimation := $GunPivot/AnimationPlayer as AnimationPlayer
 var shootCooldown: float = 0
 
 # Called when the node enters the scene tree for the first time.
@@ -40,5 +42,7 @@ func _process(delta: float) -> void:
 				# do Juicy Fx
 				pass
 			shootCooldown = 0
+			($GunPivot/Sprite3D as Sprite3D).frame = randi() % 15 + 1
+			gunAnimation.play("Fire")
 
 	($GunPivot as Spatial).look_at(rayEnd, Vector3(0,1,0))

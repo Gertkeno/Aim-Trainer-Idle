@@ -1,7 +1,43 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Player/Raycaster.gd" type="Script" id=1]
 [ext_resource path="res://assets/AK/Scenes/AK.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/explosion_13.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Fire"
+length = 0.3
+tracks/0/type = "transform"
+tracks/0/path = NodePath("AK")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0.00466507, 1, 0, 0, 0, 0, 0.707107, 0, 0.707107, 1, 1, 1, 0.0902539, 1, 0, 0, 0.394, 0, 0.707, 0, 0.707, 1, 1, 1, 0.283051, 1, 0, 0, 0, 0, 0.707107, 0, 0.707107, 1, 1, 1 )
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite3D:opacity")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.00288591, 0.110483 ),
+"transitions": PoolRealArray( 1, 1.7411 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite3D/OmniLight:light_energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.00147765, 0.141499 ),
+"transitions": PoolRealArray( 2.2974, 1 ),
+"update": 0,
+"values": [ 14.2, 0.0 ]
+}
 
 [node name="Player" type="Spatial"]
 script = ExtResource( 1 )
@@ -16,5 +52,20 @@ current = true
 transform = Transform( -5.46392e-08, 0, 1.25, 0, 1.25, 0, -1.25, 0, -5.46392e-08, -0.569, -0.458, 0 )
 
 [node name="AK" parent="GunPivot" instance=ExtResource( 2 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
+transform = Transform( 5.96046e-08, 0, 1, 0, 1, 0, -1, 0, 5.96046e-08, 0, 0, 0.0905133 )
 skeleton = NodePath("../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GunPivot"]
+anims/Fire = SubResource( 1 )
+
+[node name="Sprite3D" type="Sprite3D" parent="GunPivot"]
+transform = Transform( 0.056636, 0, -4.12357e-08, 0, 0.056636, 0, -4.12357e-08, 0, 1, 0.00386677, 0.100244, -0.649421 )
+opacity = 0.0
+texture = ExtResource( 3 )
+hframes = 4
+vframes = 4
+
+[node name="OmniLight" type="OmniLight" parent="GunPivot/Sprite3D"]
+transform = Transform( 14.1253, 0, 1.08669e-05, 0, 14.1253, 0, -3.41061e-13, 0, 0.8, 1.49012e-08, 2.66621, 0.112285 )
+light_energy = 0.0
+omni_range = 0.822276

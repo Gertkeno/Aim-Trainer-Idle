@@ -2,19 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/crosshair001.png-708628c62ad6657173961c686df380e0.stex"
+path="res://.import/explosion_13.png-dc81217b43f9d2866e04366fdcabe66b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_crosshairPack/crosshair001.png"
-dest_files=[ "res://.import/crosshair001.png-708628c62ad6657173961c686df380e0.stex" ]
+source_file="res://assets/explosion_13.png"
+dest_files=[ "res://.import/explosion_13.png-dc81217b43f9d2866e04366fdcabe66b.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
