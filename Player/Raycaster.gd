@@ -6,7 +6,7 @@ export (float, 5, 200) var rayLength := 50
 onready var camera := $CameraPivot/Camera as Camera
 onready var gun := $GunPivot/AK as Spatial
 onready var gunAnimation := $GunPivot/AnimationPlayer as AnimationPlayer
-var shootCooldown: float = 0
+var shootCooldown: float = Stats.get_fire_delay()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -36,13 +36,13 @@ func _process(delta: float) -> void:
 	var intersection := space_state.intersect_ray(rayOrigin, rayEnd, [], 2)
 
 	shootCooldown += delta
-	if not intersection.empty():
-		if Input.is_action_pressed("Fire") and shootCooldown > Stats.get_fire_delay():
+	if Input.is_action_pressed("Fire") and shootCooldown > Stats.get_fire_delay():
+		if not intersection.empty():
 			if _hit_enemy(intersection.collider):
 				# do Juicy Fx
 				pass
-			shootCooldown = 0
-			($GunPivot/Sprite3D as Sprite3D).frame = randi() % 15 + 1
-			gunAnimation.play("Fire")
+		shootCooldown = 0
+		($GunPivot/Sprite3D as Sprite3D).frame = randi() % 15 + 1
+		gunAnimation.play("Fire")
 
 	($GunPivot as Spatial).look_at(rayEnd, Vector3(0,1,0))

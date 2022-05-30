@@ -6,10 +6,10 @@
 
 [sub_resource type="Animation" id=1]
 resource_name = "Fire"
-length = 0.3
+length = 0.288
 tracks/0/type = "transform"
 tracks/0/path = NodePath("AK")
-tracks/0/interp = 1
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -52,7 +52,7 @@ current = true
 transform = Transform( -5.46392e-08, 0, 1.25, 0, 1.25, 0, -1.25, 0, -5.46392e-08, -0.569, -0.458, 0 )
 
 [node name="AK" parent="GunPivot" instance=ExtResource( 2 )]
-transform = Transform( 5.96046e-08, 0, 1, 0, 1, 0, -1, 0, 5.96046e-08, 0, 0, 0.0905133 )
+transform = Transform( 0, 0, 1, 0, 1, 0, -1, 0, 0, 0, 0, 0 )
 skeleton = NodePath("../..")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="GunPivot"]
