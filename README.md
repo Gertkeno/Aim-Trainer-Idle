@@ -2,7 +2,7 @@
 
 Shoot enemies to upgrade your gamer set up.
 
-Made with Godot 3.4
+Made with Godot 3.4 for [Go Godot Jam 3](https://itch.io/jam/go-godot-jam-3).
 
 External assets are listed in [COPYRIGHT.md](COPYRIGHT.md "Copyright list") with
 original links and attribution.
