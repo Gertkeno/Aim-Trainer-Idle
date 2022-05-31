@@ -9,7 +9,7 @@ onready var body := $Body as KinematicBody
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	set_dead(0)
 
 func respawn():
 	head.collision_layer = 0x2 # Layer 2 to be shootable
@@ -26,5 +26,4 @@ func set_dead(value: float):
 	Stats.playerDosh += value
 
 func _process(_delta):
-	if(Input.is_action_just_pressed("Spacebar")):
-		respawn()
+	pass

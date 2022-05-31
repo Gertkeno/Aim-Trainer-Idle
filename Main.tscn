@@ -2,27 +2,22 @@
 
 [ext_resource path="res://AimtrainEnvironment.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/UI.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://EnemySpawner.gd" type="Script" id=3]
 [ext_resource path="res://Enemy/Enemy_Animated.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Player/Crosshair.tscn" type="PackedScene" id=5]
 
 [node name="Main" type="Node"]
+script = ExtResource( 3 )
 
 [node name="AimtrainEnvironment" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0252061, 0.0621018, -0.0280681 )
 
 [node name="UI" parent="." instance=ExtResource( 2 )]
 
-[node name="human" parent="." instance=ExtResource( 3 )]
-transform = Transform( 0.193104, 0, 0.981178, 0, 1, 0, -0.981178, 0, 0.193104, -1.13329, 0.0621042, -1.61797 )
+[node name="FrontLeftTarg" parent="." instance=ExtResource( 4 )]
+transform = Transform( -0.730674, 0, 0.682726, 0, 1, 0, -0.682726, 0, -0.730674, 3.0691, 0.0621088, 1.01943 )
 
-[node name="human2" parent="." instance=ExtResource( 3 )]
-transform = Transform( -0.510618, 0, 0.859808, 0, 1, 0, -0.859808, 0, -0.510618, -1.31888, 0.0621042, 1.54304 )
-
-[node name="human3" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.49994, 0, 0.86606, 0, 1, 0, -0.86606, 0, 0.49994, -1.4902, 0.062109, -0.540645 )
-
-[node name="human4" parent="." instance=ExtResource( 4 )]
-transform = Transform( -0.730674, 0, 0.682726, 0, 1, 0, -0.682726, 0, -0.730674, -9.08489, 0.0621088, 2.80611 )
+[node name="FrontRightTarg" parent="." instance=ExtResource( 4 )]
+transform = Transform( -0.730674, 0, 0.682726, 0, 1, 0, -0.682726, 0, -0.730674, 3.069, 0.062, -1 )
 
 [node name="Crosshair" parent="." instance=ExtResource( 5 )]
