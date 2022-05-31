@@ -5,6 +5,7 @@ var locations = []
 var enemies = []
 var locationAmt = 247 # Amount of enemies needed
 var rowAmt = 22 # Back row holds 22 enemies
+var enemyStartAmt = 4
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,22 +25,28 @@ func _ready():
 		zIncrement += .881818*rowAmt
 		zIncrement += .881818/2
 		xIncrement += .64
-
-	for i in locations:
-		var scene = load("res://Enemy/Enemy_Animated.tscn")
+	
+	for _i in range(0,enemyStartAmt):
+		var scene = load("res://Enemy/Enemy.tscn")
 		var enemy = scene.instance()
-		enemy.set_translation(i)
+		enemy.set_translation(get_random_location())
 		add_child(enemy)
+		enemy.respawn()
 		enemies.append(enemy)
 		
-	show_random_enemies(8) # How many enemies spawn at start of game
+func get_random_location():
+	randomize()
+	return locations[randi() % locations.size()]
 	
 func show_random_enemies(num: int):
 	
 	randomize()
 	
 	for _i in range(0,num):
-		enemies[randi() % enemies.size()].respawn()
+		var enemy = enemies[randi() % enemies.size()]
+		enemy.set_translation(get_random_location())
+		enemy.rotation_degrees.y = randi() % 360
+		enemy.respawn()
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Spacebar"):

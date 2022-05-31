@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://AimtrainEnvironment.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/UI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://EnemySpawner.gd" type="Script" id=3]
-[ext_resource path="res://Enemy/Enemy_Animated.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Player/Crosshair.tscn" type="PackedScene" id=5]
 
 [node name="Main" type="Node"]
@@ -13,11 +12,5 @@ script = ExtResource( 3 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0252061, 0.0621018, -0.0280681 )
 
 [node name="UI" parent="." instance=ExtResource( 2 )]
-
-[node name="FrontLeftTarg" parent="." instance=ExtResource( 4 )]
-transform = Transform( -0.730674, 0, 0.682726, 0, 1, 0, -0.682726, 0, -0.730674, 3.0691, 0.0621088, 1.01943 )
-
-[node name="FrontRightTarg" parent="." instance=ExtResource( 4 )]
-transform = Transform( -0.730674, 0, 0.682726, 0, 1, 0, -0.682726, 0, -0.730674, 3.069, 0.062, -1 )
 
 [node name="Crosshair" parent="." instance=ExtResource( 5 )]
