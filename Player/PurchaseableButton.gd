@@ -16,7 +16,7 @@ func _ready() -> void:
 	update_text()
 
 func update_text() -> void:
-	($Label as Label).text = displayName + "\n$" + str(round(baseCost)) + "\n[" + str(Stats.get(statName)) + "]"
+	($Label as Label).text = displayName + "\n" + str(round(baseCost)) + "XP\n[" + str(Stats.get(statName)) + "]"
 
 func _on_Button_pressed() -> void:
 	if Stats.playerDosh < baseCost:
