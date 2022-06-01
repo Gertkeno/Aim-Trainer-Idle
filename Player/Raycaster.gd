@@ -26,6 +26,9 @@ func _hit_enemy(hitbox: KinematicBody) -> bool:
 	enemy.set_dead(value)
 	return true
 
+func aim_botting(_delta: float) -> void:
+	pass
+
 func _process(delta: float) -> void:
 	var space_state := get_world().direct_space_state
 	var mouse_position := get_viewport().get_mouse_position()

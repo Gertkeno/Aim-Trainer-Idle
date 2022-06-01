@@ -69,3 +69,5 @@ vframes = 4
 transform = Transform( 14.1253, 0, 1.08669e-05, 0, 14.1253, 0, -3.41061e-13, 0, 0.8, 1.49012e-08, 2.66621, 0.112285 )
 light_energy = 0.0
 omni_range = 0.822276
+
+[node name="Tween" type="Tween" parent="."]

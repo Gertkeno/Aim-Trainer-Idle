@@ -9,14 +9,15 @@ original links and attribution.
 
 # The Big Todo
 
-- [ ] Purchasable UI
+- [x] Purchasable UI
 	- [x] Draft
-	- [ ] Create buttons from list
-	- [ ] Buttons apply stat changes
+	- [x] Create buttons from list
+	- [x] Buttons apply stat changes
 - [ ] Audio
 	- [ ] Gun sounds
 	- [ ] Headshot ding
 	- [ ] Kill/Gain money
+	- [ ] Music
 - [ ] Shooting
 	- [ ] Aim-bot
 	- [ ] Aim-bot toggle
@@ -40,6 +41,6 @@ original links and attribution.
 	- [x] Dosh per kill
 	- [x] Dosh per head shot
 	- [ ] aim-bot speed
-- [ ] Economy
+- [x] Economy
 	- [x] Get money
-	- [ ] Spend money
+	- [x] Spend money

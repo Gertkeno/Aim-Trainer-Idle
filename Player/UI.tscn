@@ -57,6 +57,8 @@ margin_bottom = 180.0
 size_flags_vertical = 1
 statName = "targetWorth"
 displayName = "Enemy Worth"
+baseCost = 10.0
+costScalingRate = 1.07
 
 [node name="Button3" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
 margin_top = 184.0
@@ -291,5 +293,7 @@ margin_right = 285.0
 margin_bottom = 52.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 1 )
-text = "$0"
+text = "0XP"
 script = ExtResource( 5 )
+
+[connection signal="purchased" from="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button" to="Aimtrain Panel/ViewportContainer/Viewport/Player" method="_on_Button_purchased"]

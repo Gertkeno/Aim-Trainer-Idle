@@ -12,6 +12,8 @@ export (int, "linear", "exponential") var costScalingType: int = 1
 export var costScalingRate: float = 1.7
 export var bonusValue: float = 1
 
+signal purchased(statName)
+
 func _ready() -> void:
 	update_text()
 
@@ -23,6 +25,8 @@ func _on_Button_pressed() -> void:
 		# epic fail
 		return
 	Stats.playerDosh -= baseCost
+
+	emit_signal("purchased", statName)
 
 	Stats.set(statName, Stats.get(statName) + bonusValue)
 	if costScalingType == 0:
