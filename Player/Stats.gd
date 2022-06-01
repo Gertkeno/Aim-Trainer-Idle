@@ -14,3 +14,4 @@ var flickChance: float = 0
 var targetWorth: float = 1
 var enemySpeed: float = 1
 var enemyMaxSpawn: int = 4
+var respawnTime: float = 1

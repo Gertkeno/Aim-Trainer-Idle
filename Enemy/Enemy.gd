@@ -25,5 +25,6 @@ func set_dead(value: float):
 	self.visible = false
 	Stats.playerDosh += value
 
+
 func _process(_delta):
 	pass
