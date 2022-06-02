@@ -11,6 +11,7 @@ export var baseCost: float = 1
 export (int, "linear", "exponential") var costScalingType: int = 1
 export var costScalingRate: float = 1.7
 export var bonusValue: float = 1
+export var bonusScaler: float = 1
 
 signal purchased(statName)
 
@@ -28,7 +29,7 @@ func _on_Button_pressed() -> void:
 
 	emit_signal("purchased", statName)
 
-	Stats.set(statName, Stats.get(statName) + bonusValue)
+	Stats.set(statName, Stats.get(statName)*bonusScaler + bonusValue)
 	if costScalingType == 0:
 		baseCost += costScalingRate
 	elif costScalingType == 1:

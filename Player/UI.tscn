@@ -59,7 +59,7 @@ size_flags_vertical = 1
 statName = "targetWorth"
 displayName = "Upgrade Crosshair"
 baseCost = 10.0
-costScalingRate = 1.07
+costScalingRate = 1.5
 
 [node name="Button3" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
 margin_top = 184.0
@@ -71,6 +71,18 @@ displayName = "Headshot Bonus"
 baseCost = 3.0
 costScalingRate = 1.4
 bonusValue = 0.1
+
+[node name="Button4" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 276.0
+margin_right = 183.0
+margin_bottom = 364.0
+size_flags_vertical = 1
+statName = "respawnTime"
+displayName = "Faster Enemy Spawn"
+baseCost = 3.0
+costScalingRate = 1.4
+bonusValue = 0.0
+bonusScaler = 0.95
 
 [node name="Upgrade Panel 2" type="Control" parent="."]
 self_modulate = Color( 0, 1, 0.129412, 1 )

@@ -53,7 +53,7 @@ func _input(event: InputEvent) -> void:
 		show_random_enemies(1)
 	if event.is_action_released("Fire"):
 		for i in enemies:
-			if !i.is_visible_in_tree():
+			if !i.is_visible_in_tree() && timer.is_stopped():
 				timer.start(Stats.respawnTime)
 
 func _on_RespawnTimer_timeout():
