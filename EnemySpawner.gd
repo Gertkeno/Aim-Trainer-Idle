@@ -7,6 +7,8 @@ var locationAmt := 247 # Amount of enemies needed
 var rowAmt := 22 # Back row holds 22 enemies
 var enemyStartAmt := 4
 
+export(PackedScene) var enemyType: PackedScene
+
 onready var timer := $RespawnTimer as Timer
 
 # Called when the node enters the scene tree for the first time.
@@ -28,8 +30,7 @@ func _ready():
 		xIncrement += .64
 
 	for _i in range(0,enemyStartAmt):
-		var scene := load("res://Enemy/Enemy.tscn") as PackedScene
-		var enemy := scene.instance() as Enemy
+		var enemy := enemyType.instance() as Enemy
 		enemy.set_translation(get_random_location())
 		add_child(enemy)
 		enemies.append(enemy)

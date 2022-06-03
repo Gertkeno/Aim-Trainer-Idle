@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://AimtrainEnvironment.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/UI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemy/Spawner.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=4]
 
 [node name="Main" type="Node"]
 
@@ -12,3 +13,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0252061, 0.0621018, -0.0280
 [node name="UI" parent="." instance=ExtResource( 2 )]
 
 [node name="Spawner" parent="." instance=ExtResource( 3 )]
+enemyType = ExtResource( 4 )
