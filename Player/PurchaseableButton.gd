@@ -17,6 +17,10 @@ signal purchased(statName)
 
 func _ready() -> void:
 	update_text()
+	Stats.connect("doshChanged", self, "_is_purchasable")
+
+func _is_purchasable() -> void:
+	self.disabled = Stats.playerDosh < self.baseCost
 
 func update_text() -> void:
 	($Label as Label).text = displayName + "\n" + str(round(baseCost)) + "XP\n[" + str(Stats.get(statName)) + "]"
