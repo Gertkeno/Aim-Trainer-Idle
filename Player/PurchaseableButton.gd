@@ -35,9 +35,10 @@ func _on_Button_pressed() -> void:
 
 	Stats.set(statName, Stats.get(statName)*bonusScaler + bonusValue)
 	Stats.totalPurchases += 1
+
 	if costScalingType == 0:
 		baseCost += costScalingRate
 	elif costScalingType == 1:
-		baseCost *= costScalingRate
+		baseCost = max(baseCost + 1, baseCost * costScalingRate)
 
 	update_text()

@@ -56,7 +56,7 @@ transform = Transform( 0, 0, 1, 0, 1, 0, -1, 0, 0, 0, 0, 0 )
 skeleton = NodePath("../..")
 
 [node name="RayCast" type="RayCast" parent="GunPivot/AK"]
-transform = Transform( -0.0100704, -0.999949, -4.41516e-08, 0.999949, -0.0100704, 4.37092e-08, -4.41516e-08, -4.37092e-08, 1, 0.605711, 0.092217, 2.64765e-08 )
+transform = Transform( -0.0100704, -0.999949, -4.41516e-08, 0.999949, -0.0100704, 4.37092e-08, -4.41516e-08, -4.37092e-08, 1, 0.605711, 0.0904835, 2.64765e-08 )
 exclude_parent = false
 cast_to = Vector3( 0, -50, 0 )
 collision_mask = 2
@@ -66,7 +66,7 @@ debug_shape_custom_color = Color( 0.921569, 0.541176, 0.843137, 1 )
 anims/Fire = SubResource( 1 )
 
 [node name="Sprite3D" type="Sprite3D" parent="GunPivot"]
-transform = Transform( 0.056636, 0, -4.12357e-08, 0, 0.056636, 0, -4.12357e-08, 0, 1, 0.00386677, 0.100244, -0.618116 )
+transform = Transform( 0.0566348, 0.000264471, -0.00449459, -0.000265272, 0.0566351, -0.003144, 0.000253676, 0.000179253, 0.999985, 0.00386677, 0.100244, -0.618116 )
 opacity = 0.0
 billboard = 1
 double_sided = false

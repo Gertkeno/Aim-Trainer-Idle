@@ -2,10 +2,10 @@ extends Node
 
 var currentLoc := Vector3()
 var locations: Array = []
-var enemies = []
+var enemies := []
 var locationAmt := 247 # Amount of enemies needed
 var rowAmt := 22 # Back row holds 22 enemies
-var enemyStartAmt := 4
+var enemyStartAmt := 7
 
 export(PackedScene) var enemyType: PackedScene
 
@@ -35,6 +35,8 @@ func _ready():
 		add_child(enemy)
 		enemies.append(enemy)
 
+	timer.start(Stats.respawnTime)
+
 func get_random_location():
 	randomize()
 	return locations[randi() % locations.size()]
@@ -52,10 +54,10 @@ func show_random_enemies(num: int):
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Spacebar"):
 		show_random_enemies(1)
-	if event.is_action_released("Fire"):
-		for i in enemies:
-			if !i.is_visible_in_tree() && timer.is_stopped():
-				timer.start(Stats.respawnTime)
+	#if event.is_action_released("Fire"):
+	#	for i in enemies:
+	#		if !i.is_visible_in_tree() && timer.is_stopped():
+	#			timer.start(Stats.respawnTime)
 
 func _on_RespawnTimer_timeout():
 	for i in enemies:
@@ -64,3 +66,5 @@ func _on_RespawnTimer_timeout():
 			i.set_translation(get_random_location())
 			i.rotation_degrees.y = randi() % 360
 			i.respawn()
+			break
+	timer.wait_time = Stats.respawnTime

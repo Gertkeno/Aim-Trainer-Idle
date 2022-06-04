@@ -82,6 +82,7 @@ func _process(delta: float) -> void:
 			aimbotting = true
 			ray.enabled = true
 			_start_aimbot()
+			($Aimbot/MashingFire as Timer).wait_time = get_fire_delay()
 			($Aimbot/MashingFire as Timer).start()
 
 	if aimbotting:
