@@ -37,8 +37,9 @@ func _on_Button_pressed() -> void:
 	Stats.totalPurchases += 1
 
 	if costScalingType == 0:
-		baseCost += costScalingRate
+		self.baseCost += costScalingRate
 	elif costScalingType == 1:
-		baseCost = max(baseCost + 1, baseCost * costScalingRate)
+		self.baseCost = max(self.baseCost + 1, self.baseCost * costScalingRate)
 
+	_set_purchasable()
 	update_text()

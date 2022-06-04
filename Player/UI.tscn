@@ -42,43 +42,44 @@ margin_bottom = 548.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
-size_flags_vertical = 1
-statName = "fireDelay"
-displayName = "Fire Rate"
-costScalingType = 0
-costScalingRate = 2.0
-bonusValue = 0.1
-
 [node name="Button2" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
-margin_top = 92.0
-margin_bottom = 180.0
 size_flags_vertical = 1
 statName = "targetWorth"
 displayName = "Upgrade Crosshair"
 baseCost = 10.0
-costScalingRate = 1.5
-
-[node name="Button3" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
-margin_top = 184.0
-margin_bottom = 272.0
-size_flags_vertical = 1
-statName = "headshotMultiplier"
-displayName = "Headshot Bonus"
-baseCost = 5.0
-costScalingRate = 1.4
-bonusValue = 0.1
+costScalingRate = 1.3
 
 [node name="Button4" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
-margin_top = 276.0
-margin_bottom = 364.0
+margin_top = 92.0
+margin_bottom = 180.0
 size_flags_vertical = 1
 statName = "respawnTime"
 displayName = "Faster Enemy Spawn"
-baseCost = 3.0
-costScalingRate = 1.4
+baseCost = 10.0
+costScalingRate = 1.5
 bonusValue = 0.0
 bonusScaler = 0.95
+
+[node name="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 184.0
+margin_bottom = 272.0
+size_flags_vertical = 1
+statName = "fireDelay"
+displayName = "Fire Rate"
+baseCost = 12.0
+costScalingType = 0
+costScalingRate = 2.0
+bonusValue = 0.1
+
+[node name="Button3" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 276.0
+margin_bottom = 364.0
+size_flags_vertical = 1
+statName = "headshotMultiplier"
+displayName = "Headshot Bonus"
+baseCost = 20.0
+costScalingRate = 1.2
+bonusValue = 0.1
 
 [node name="Button5" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
 margin_top = 368.0
@@ -86,9 +87,9 @@ margin_bottom = 456.0
 size_flags_vertical = 1
 statName = "headshotChance"
 displayName = "Aimbot Headshot %"
-baseCost = 8.0
+baseCost = 50.0
 costScalingType = 0
-costScalingRate = 8.0
+costScalingRate = 4.0
 
 [node name="Button6" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
 margin_top = 460.0
@@ -96,8 +97,8 @@ margin_bottom = 548.0
 size_flags_vertical = 1
 statName = "aimSpeed"
 displayName = "Aimbot Speed"
-baseCost = 3.0
-costScalingRate = 1.2
+baseCost = 100.0
+costScalingRate = 1.08
 bonusValue = 0.2
 
 [node name="Upgrade Panel 2" type="Control" parent="."]

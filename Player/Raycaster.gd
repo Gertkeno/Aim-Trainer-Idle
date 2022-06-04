@@ -8,6 +8,7 @@ onready var gunAnimation := $GunPivot/AnimationPlayer as AnimationPlayer
 onready var tween := $Aimbot as Tween
 onready var gunPivot := $GunPivot as Spatial
 onready var ray := $GunPivot/AK/RayCast as RayCast
+onready var mashingTimer := $Aimbot/MashingFire as Timer
 var shootCooldown: float = 1 / Stats.fireDelay
 
 func get_fire_delay() -> float:
@@ -82,8 +83,8 @@ func _process(delta: float) -> void:
 			aimbotting = true
 			ray.enabled = true
 			_start_aimbot()
-			($Aimbot/MashingFire as Timer).wait_time = get_fire_delay()
-			($Aimbot/MashingFire as Timer).start()
+			mashingTimer.wait_time = get_fire_delay()
+			mashingTimer.start()
 
 	if aimbotting:
 		return
@@ -131,7 +132,7 @@ func _get_gun_hit() -> Enemy:
 # the ray hit anything on fire we kill it with a random headshot
 func _on_MashingFire_timeout() -> void:
 	if aimbotting:
-		($Aimbot/MashingFire as Timer).wait_time = get_fire_delay()
+		mashingTimer.wait_time = get_fire_delay()
 		fire_fx()
 		var hit := _get_gun_hit()
 		if hit != null:
@@ -141,4 +142,4 @@ func _on_MashingFire_timeout() -> void:
 			hit.set_dead(worth)
 			_start_aimbot()
 	else:
-		($Aimbot/MashingFire as Timer).stop()
+		mashingTimer.stop()
