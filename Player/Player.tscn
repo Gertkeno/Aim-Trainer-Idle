@@ -68,6 +68,8 @@ anims/Fire = SubResource( 1 )
 [node name="Sprite3D" type="Sprite3D" parent="GunPivot"]
 transform = Transform( 0.056636, 0, -4.12357e-08, 0, 0.056636, 0, -4.12357e-08, 0, 1, 0.00386677, 0.100244, -0.618116 )
 opacity = 0.0
+billboard = 1
+double_sided = false
 texture = ExtResource( 3 )
 hframes = 4
 vframes = 4

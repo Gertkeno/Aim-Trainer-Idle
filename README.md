@@ -9,6 +9,8 @@ original links and attribution.
 
 # The Big Todo
 
+- [ ] Sort purchasable categories
+- [ ] Sell account
 - [x] Purchasable UI
 	- [x] Draft
 	- [x] Create buttons from list
@@ -19,7 +21,7 @@ original links and attribution.
 	- [ ] Kill/Gain money
 	- [ ] Music
 - [ ] Shooting
-	- [ ] Aim-bot
+	- [x] Aim-bot
 	- [ ] Aim-bot toggle
 	- [x] Manual
 	- [x] Cross hair
@@ -30,7 +32,7 @@ original links and attribution.
 	- [x] can be shot
 	- [ ] Maybe 3 Weapons
 	- [ ] Angry eyebrows
-	- [ ] Spawn infinitely
+	- [x] Spawn infinitely
 	- [ ] Movement
 	- [ ] Death effects
 	- [ ] Editable stats
@@ -40,7 +42,7 @@ original links and attribution.
 	- [ ] Bullet magnetism
 	- [x] Dosh per kill
 	- [x] Dosh per head shot
-	- [ ] aim-bot speed
+	- [x] aim-bot speed
 - [x] Economy
 	- [x] Get money
 	- [x] Spend money
