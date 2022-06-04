@@ -56,7 +56,8 @@ func _start_aimbot() -> void:
 		($Aimbot/Retry as Timer).start()
 		return
 
-	var lookpoint: Vector3 = lastAimbotTarget.global_transform.origin + Vector3.UP * 0.8
+	var randheight: float = randf() * 1.4 + 0.2
+	var lookpoint: Vector3 = lastAimbotTarget.global_transform.origin + Vector3.UP * randheight
 	var final := gunPivot.global_transform.looking_at(lookpoint, Vector3.UP)
 	tween.interpolate_property(
 		gunPivot,

@@ -17,23 +17,24 @@ signal purchased(statName)
 
 func _ready() -> void:
 	update_text()
-	Stats.connect("doshChanged", self, "_is_purchasable")
+	Stats.connect("xpChanged", self, "_set_purchasable")
 
-func _is_purchasable() -> void:
-	self.disabled = Stats.playerDosh < self.baseCost
+func _set_purchasable() -> void:
+	self.disabled = Stats.playerXP < self.baseCost
 
 func update_text() -> void:
 	($Label as Label).text = displayName + "\n" + str(round(baseCost)) + "XP\n[" + str(Stats.get(statName)) + "]"
 
 func _on_Button_pressed() -> void:
-	if Stats.playerDosh < baseCost:
+	if Stats.playerXP < baseCost:
 		# epic fail
 		return
-	Stats.playerDosh -= baseCost
+	Stats.playerXP -= baseCost
 
 	emit_signal("purchased", statName)
 
 	Stats.set(statName, Stats.get(statName)*bonusScaler + bonusValue)
+	Stats.totalPurchases += 1
 	if costScalingType == 0:
 		baseCost += costScalingRate
 	elif costScalingType == 1:

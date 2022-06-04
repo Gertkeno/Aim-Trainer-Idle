@@ -26,7 +26,7 @@ func set_dead(value: float):
 	text.amount = value
 	add_child(text)
 	self.visible = false
-	Stats.playerDosh += value
+	Stats.playerXP += value
 
 
 func _process(_delta):
