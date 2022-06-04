@@ -2,28 +2,26 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/hand.png-d2619a979ad1564d34c345ff6b48093c.s3tc.stex"
-path.etc="res://.import/hand.png-d2619a979ad1564d34c345ff6b48093c.etc.stex"
+path="res://.import/hand.png-d2619a979ad1564d34c345ff6b48093c.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc" ],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/programmerArt/hand.png"
-dest_files=[ "res://.import/hand.png-d2619a979ad1564d34c345ff6b48093c.s3tc.stex", "res://.import/hand.png-d2619a979ad1564d34c345ff6b48093c.etc.stex" ]
+dest_files=[ "res://.import/hand.png-d2619a979ad1564d34c345ff6b48093c.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=true
+flags/repeat=0
 flags/filter=true
-flags/mipmaps=true
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
