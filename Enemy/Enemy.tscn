@@ -12,7 +12,7 @@ height = 0.122553
 radius = 0.263671
 height = 1.21289
 
-[node name="human" type="MeshInstance"]
+[node name="human" type="MeshInstance" groups=["enemies"]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00214663, -2.98023e-08, -6.18696e-05 )
 mesh = ExtResource( 1 )
 skeleton = NodePath("")

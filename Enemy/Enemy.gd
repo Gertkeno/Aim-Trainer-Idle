@@ -9,7 +9,10 @@ onready var body := $Body as KinematicBody
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	set_dead(0)
+	head.collision_layer = 0x4 # layer 3 NOT shootable
+	body.collision_layer = 0x4
+	self.visible = false
+	#set_dead(0)
 
 func respawn():
 	head.collision_layer = 0x2 # Layer 2 to be shootable

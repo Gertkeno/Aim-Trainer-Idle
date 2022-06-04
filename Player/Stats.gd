@@ -7,7 +7,7 @@ var playerDosh: float = 0
 
 # Aim bot
 var aimSpeed: float = 1
-var accuracy: float = 100
+var headshotChance: float = 1
 var flickChance: float = 0
 
 # Enemy

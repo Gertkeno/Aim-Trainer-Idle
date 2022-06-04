@@ -22,7 +22,7 @@ func _input(event: InputEvent) -> void:
 			sprite.frame -= 1
 		else:
 			sprite.set_frame(highFrame)
-	
+
 
 func _on_Button2_purchased(statName):
 	if statName == "targetWorth":

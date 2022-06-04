@@ -13,7 +13,7 @@ tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0.707107, 0, 0.707107, 1, 1, 1, 0.0366302, 1, 0, 0, 0.174, 0, 0.707, 0, 0.707, 1, 1, 1, 0.19808, 1, 0, 0, 0.051, 0, 0.707107, 0, 0.707107, 1, 1, 1, 0.283051, 1, 0, 0, 0, 0, 0.707107, 0, 0.707107, 1, 1, 1 )
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0.707107, 0, 0.707107, 1, 1, 1, 0.0366302, 1, 0, -0.042, 0.174, 0, 0.707, 0, 0.707, 1.097, 1, 1.3, 0.19808, 1, 0, 0, 0.051, 0, 0.707107, 0, 0.707107, 1, 1, 1, 0.283051, 1, 0, 0, 0, 0, 0.707107, 0, 0.707107, 1, 1, 1 )
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite3D:opacity")
 tracks/1/interp = 0
@@ -55,6 +55,13 @@ transform = Transform( -5.46392e-08, 0, 1.25, 0, 1.25, 0, -1.25, 0, -5.46392e-08
 transform = Transform( 0, 0, 1, 0, 1, 0, -1, 0, 0, 0, 0, 0 )
 skeleton = NodePath("../..")
 
+[node name="RayCast" type="RayCast" parent="GunPivot/AK"]
+transform = Transform( -0.0100704, -0.999949, -4.41516e-08, 0.999949, -0.0100704, 4.37092e-08, -4.41516e-08, -4.37092e-08, 1, 0.605711, 0.092217, 2.64765e-08 )
+exclude_parent = false
+cast_to = Vector3( 0, -50, 0 )
+collision_mask = 2
+debug_shape_custom_color = Color( 0.921569, 0.541176, 0.843137, 1 )
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="GunPivot"]
 anims/Fire = SubResource( 1 )
 
@@ -70,4 +77,13 @@ transform = Transform( 14.1253, 0, 1.08669e-05, 0, 14.1253, 0, -3.41061e-13, 0, 
 light_energy = 0.0
 omni_range = 0.822276
 
-[node name="Tween" type="Tween" parent="."]
+[node name="Aimbot" type="Tween" parent="."]
+
+[node name="Retry" type="Timer" parent="Aimbot"]
+one_shot = true
+
+[node name="MashingFire" type="Timer" parent="Aimbot"]
+
+[connection signal="tween_all_completed" from="Aimbot" to="." method="_on_Aimbot_tween_all_completed"]
+[connection signal="timeout" from="Aimbot/Retry" to="." method="_on_Retry_timeout"]
+[connection signal="timeout" from="Aimbot/MashingFire" to="." method="_on_MashingFire_timeout"]
