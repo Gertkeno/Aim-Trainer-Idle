@@ -27,14 +27,14 @@ func _set_purchasable() -> void:
 
 func update_text() -> void:
 	var postfix: String = "XP" if costType == 0 else "$"
-	($Label as Label).text = displayName + "\n" + str(round(baseCost)) + postfix + "\n[" + str(Stats.get(statName)) + "]"
+	($Label as Label).text = displayName + "\n" + str(round(baseCost*Stats.discountValue)) + postfix + "\n[" + str(Stats.get(statName)) + "]"
 
 func _on_Button_pressed() -> void:
 	if costType == 0:
-		if Stats.playerXP < baseCost:
+		if Stats.playerXP < baseCost*Stats.discountValue:
 			return
 		else:
-			Stats.playerXP -= baseCost
+			Stats.playerXP -= baseCost*Stats.discountValue
 	elif costType == 1:
 		if Stats.playerDosh < baseCost:
 			return
