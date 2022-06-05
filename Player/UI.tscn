@@ -186,6 +186,7 @@ margin_left = -0.0160007
 margin_top = -0.0640001
 margin_right = -0.0960083
 margin_bottom = -0.0160065
+hint_tooltip = "Discount all upgrades (cost $10, $100, $1000)"
 focus_mode = 0
 action_mode = 0
 script = ExtResource( 12 )
