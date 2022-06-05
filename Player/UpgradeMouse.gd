@@ -21,5 +21,12 @@ func _on_Button_pressed() -> void:
 			Stats.playerDosh -= cost
 			Stats.discountValue *= 0.8
 			cost *= 10
+			_update_all_buttons()
 	else:
 		index += 0
+		
+func _update_all_buttons() -> void:
+	for i in get_tree().get_nodes_in_group("purchaseableButton"):
+		var b := i as Purchaseable
+		assert(b != null)
+		b.update_text()
