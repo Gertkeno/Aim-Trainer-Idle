@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://new_spheremesh.tres" type="SphereMesh" id=1]
+[ext_resource path="res://Enemy/explosion.gd" type="Script" id=2]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 0.609091 ), 0.0, 0.0431818, 0, 0, Vector2( 0.583333, 0.590909 ), 0.0, 0.0, 0, 0, Vector2( 0.986842, 0.0909091 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0.341463, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 0, 0, 0, 1 )
+
+[node name="explosion" type="CPUParticles"]
+emitting = false
+amount = 5
+one_shot = true
+explosiveness = 0.85
+lifetime_randomness = 0.13
+mesh = ExtResource( 1 )
+emission_shape = 1
+emission_sphere_radius = 0.37
+direction = Vector3( 0, 1, 0 )
+spread = 17.75
+gravity = Vector3( 0, -8.502, 0 )
+initial_velocity = 4.86
+angular_velocity = 1.0
+scale_amount_curve = SubResource( 1 )
+color_ramp = SubResource( 2 )
+script = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.123
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

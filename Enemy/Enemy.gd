@@ -2,6 +2,7 @@ extends Spatial
 
 class_name Enemy
 
+export(PackedScene) var explosion: PackedScene
 var floating_text := preload("res://Enemy/FloatingText.tscn")
 
 onready var head := $Head as KinematicBody
@@ -24,6 +25,11 @@ func set_dead(value: float):
 	body.collision_layer = 0x4
 	var text := floating_text.instance() as FloatingText
 	text.amount = value
+
 	add_child(text)
 	self.visible = false
 	Stats.playerXP += value
+
+	var explode := explosion.instance() as Explosion
+	explode.translate(self.global_transform.origin)
+	get_tree().get_root().add_child(explode)

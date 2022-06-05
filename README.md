@@ -12,10 +12,9 @@ original links and attribution.
 - [ ] Audio
 	- [x] Gun sounds
 	- [x] Headshot ding
-	- [ ] Kill/Gain money
 	- [ ] Music
 	- [x] UI purchasable button
-	- [ ] UI sell account
+	- [x] UI sell account
 - [ ] Enemies
 	- [x] Model and Animation
 	- [x] can be shot
@@ -23,7 +22,7 @@ original links and attribution.
 	- [ ] Angry eyebrows
 	- [x] Spawn infinitely
 	- [ ] Movement
-	- [ ] Death effects
+	- [x] Death effects
 	- [ ] Editable stats
 - [ ] Stats
 	- [ ] Bullet magnetism
