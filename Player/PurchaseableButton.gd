@@ -5,7 +5,6 @@ class_name Purchaseable
 
 export var statName: String
 export var displayName: String
-export (int, "XP", "Dosh") var costType: int = 0
 export var baseCost: float = 1
 export (int, "linear", "exponential") var costScalingType: int = 1
 export var costScalingRate: float = 1.7
@@ -20,26 +19,19 @@ func _ready() -> void:
 	Stats.connect("xpChanged", self, "_set_purchasable")
 
 func _set_purchasable() -> void:
-	if costType == 0:
-		self.disabled = Stats.playerXP < self.baseCost
-	else:
-		self.disabled = Stats.playerDosh < self.baseCost
+	self.disabled = Stats.playerXP < self.baseCost
 
 func update_text() -> void:
-	var postfix: String = "XP" if costType == 0 else "$"
-	($Label as Label).text = displayName + "\n" + str(round(baseCost*Stats.discountValue)) + postfix + "\n[" + str(Stats.get(statName)) + "]"
+	var discount: float = 1
+	if not Engine.editor_hint:
+		discount = Stats.discountValue
+	($Label as Label).text = displayName + "\n" + str(round(baseCost*discount)) + "XP\n[" + str(Stats.get(statName)) + "]"
 
 func _on_Button_pressed() -> void:
-	if costType == 0:
-		if Stats.playerXP < baseCost*Stats.discountValue:
-			return
-		else:
-			Stats.playerXP -= baseCost*Stats.discountValue
-	elif costType == 1:
-		if Stats.playerDosh < baseCost:
-			return
-		else:
-			Stats.playerDosh -= baseCost
+	if Stats.playerXP < baseCost*Stats.discountValue:
+		return
+	else:
+		Stats.playerXP -= baseCost*Stats.discountValue
 
 	emit_signal("purchased", statName)
 
