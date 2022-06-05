@@ -50,6 +50,7 @@ Stats="*res://Player/Stats.gd"
 
 gdscript/warnings/treat_warnings_as_errors=true
 gdscript/warnings/return_value_discarded=false
+gdscript/warnings/integer_division=false
 gdscript/warnings/unsafe_property_access=true
 gdscript/warnings/unsafe_method_access=true
 gdscript/warnings/unsafe_call_argument=true

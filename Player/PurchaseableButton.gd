@@ -7,6 +7,7 @@ enum CostScaling {linear, exponential}
 
 export var statName: String
 export var displayName: String
+export (int, "XP", "Dosh") var costType: int = 0
 export var baseCost: float = 1
 export (int, "linear", "exponential") var costScalingType: int = 1
 export var costScalingRate: float = 1.7
@@ -20,16 +21,26 @@ func _ready() -> void:
 	Stats.connect("xpChanged", self, "_set_purchasable")
 
 func _set_purchasable() -> void:
-	self.disabled = Stats.playerXP < self.baseCost
+	if costType == 0:
+		self.disabled = Stats.playerXP < self.baseCost
+	else:
+		self.disabled = Stats.playerDosh < self.baseCost
 
 func update_text() -> void:
-	($Label as Label).text = displayName + "\n" + str(round(baseCost)) + "XP\n[" + str(Stats.get(statName)) + "]"
+	var postfix: String = "XP" if costType == 0 else "$"
+	($Label as Label).text = displayName + "\n" + str(round(baseCost)) + postfix + "\n[" + str(Stats.get(statName)) + "]"
 
 func _on_Button_pressed() -> void:
-	if Stats.playerXP < baseCost:
-		# epic fail
-		return
-	Stats.playerXP -= baseCost
+	if costType == 0:
+		if Stats.playerXP < baseCost:
+			return
+		else:
+			Stats.playerXP -= baseCost
+	elif costType == 1:
+		if Stats.playerDosh < baseCost:
+			return
+		else:
+			Stats.playerDosh -= baseCost
 
 	emit_signal("purchased", statName)
 
