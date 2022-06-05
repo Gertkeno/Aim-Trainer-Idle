@@ -9,8 +9,8 @@ original links and attribution.
 
 # The Big Todo
 
-- [ ] Sort purchasable categories
-- [ ] Sell account
+- [x] Sort purchasable categories
+- [x] Sell account
 - [x] Purchasable UI
 	- [x] Draft
 	- [x] Create buttons from list

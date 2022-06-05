@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/human.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://assets/AK/Scenes/AK.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemy/Enemy.gd" type="Script" id=3]
+[ext_resource path="res://assets/iron_knife.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CapsuleShape" id=6]
 radius = 0.137748
@@ -47,3 +48,12 @@ transform = Transform( 0.00890145, -0.25904, -0.965826, -0.999606, -0.0280054, -
 
 [node name="AK4" parent="." instance=ExtResource( 2 )]
 transform = Transform( -0.0166222, 0.184641, -0.982665, -0.999712, -0.0200657, 0.0131402, -0.0172916, 0.982601, 0.184921, 0.267076, 0.836335, -0.0797046 )
+
+[node name="iron_knife" parent="." instance=ExtResource( 4 )]
+transform = Transform( -0.981325, -0.17077, 0.0885352, 0.0960069, -0.035986, 0.99473, -0.166684, 0.984654, 0.051709, -0.122569, 0.867127, 0.0730432 )
+
+[node name="iron_knife2" parent="." instance=ExtResource( 4 )]
+transform = Transform( -0.734524, 0.240173, 0.634659, 0.611468, -0.171293, 0.772506, 0.294247, 0.955498, -0.0210394, 0.0128672, 1.32515, 0.0911561 )
+
+[node name="iron_knife3" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.0387661, -0.0444219, 0.998261, 0.974381, 0.223165, -0.027908, -0.221537, 0.973768, 0.0519351, 0.00844156, 1.07046, -0.160324 )

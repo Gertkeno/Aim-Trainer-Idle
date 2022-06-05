@@ -79,6 +79,7 @@ surfaces/0 = {
 }
 
 [node name="AK" type="MeshInstance"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00167683, -0.000743672, 1.49012e-08 )
 mesh = SubResource( 5 )
 material/0 = null
 

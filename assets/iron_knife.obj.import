@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/iron_knife.obj-56892dca8c4e6ab00e537f02c8b6c63a.mesh"
+
+[deps]
+
+files=[ "res://.import/iron_knife.obj-56892dca8c4e6ab00e537f02c8b6c63a.mesh" ]
+
+source_file="res://assets/iron_knife.obj"
+dest_files=[ "res://.import/iron_knife.obj-56892dca8c4e6ab00e537f02c8b6c63a.mesh", "res://.import/iron_knife.obj-56892dca8c4e6ab00e537f02c8b6c63a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

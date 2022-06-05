@@ -48,7 +48,7 @@ margin_right = 183.0
 size_flags_vertical = 1
 statName = "targetWorth"
 displayName = "Upgrade Crosshair"
-baseCost = 10.0
+baseCost = 5.0
 costScalingRate = 1.3
 
 [node name="Button4" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]

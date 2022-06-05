@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/AK_1_Metalness.png-03d8eafc12047a394ab250bbb32d80a7.s3tc.stex"
-path.etc="res://.import/AK_1_Metalness.png-03d8eafc12047a394ab250bbb32d80a7.etc.stex"
+path.s3tc="res://.import/iron_knife_specular.png-081a0784908c77dfbe2314ee15555f86.s3tc.stex"
+path.etc="res://.import/iron_knife_specular.png-081a0784908c77dfbe2314ee15555f86.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/AK/Textures/AK_1/AK_1_Metalness.png"
-dest_files=[ "res://.import/AK_1_Metalness.png-03d8eafc12047a394ab250bbb32d80a7.s3tc.stex", "res://.import/AK_1_Metalness.png-03d8eafc12047a394ab250bbb32d80a7.etc.stex" ]
+source_file="res://assets/iron_knife_specular.png"
+dest_files=[ "res://.import/iron_knife_specular.png-081a0784908c77dfbe2314ee15555f86.s3tc.stex", "res://.import/iron_knife_specular.png-081a0784908c77dfbe2314ee15555f86.etc.stex" ]
 
 [params]
 
@@ -21,12 +21,12 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=true
+flags/repeat=1
 flags/filter=true
 flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
