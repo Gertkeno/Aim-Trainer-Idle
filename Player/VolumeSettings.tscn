@@ -1,0 +1,64 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Player/VolumeSettings.gd" type="Script" id=1]
+
+[node name="ListOfVolumes" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="gunshotVolume" type="VBoxContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 34.0
+
+[node name="Label" type="Label" parent="gunshotVolume"]
+margin_right = 1024.0
+margin_bottom = 14.0
+text = "Gunshot Volume"
+
+[node name="HSlider" type="HSlider" parent="gunshotVolume"]
+margin_top = 18.0
+margin_right = 1024.0
+margin_bottom = 34.0
+focus_mode = 0
+max_value = 1.0
+step = 0.05
+value = 0.1
+
+[node name="uiVolume" type="VBoxContainer" parent="."]
+margin_top = 38.0
+margin_right = 1024.0
+margin_bottom = 72.0
+
+[node name="Label" type="Label" parent="uiVolume"]
+margin_right = 1024.0
+margin_bottom = 14.0
+text = "UI Volume"
+
+[node name="HSlider" type="HSlider" parent="uiVolume"]
+margin_top = 18.0
+margin_right = 1024.0
+margin_bottom = 34.0
+focus_mode = 0
+max_value = 1.0
+step = 0.05
+value = 0.1
+
+[node name="musicVolume" type="VBoxContainer" parent="."]
+margin_top = 76.0
+margin_right = 1024.0
+margin_bottom = 110.0
+
+[node name="Label" type="Label" parent="musicVolume"]
+margin_right = 1024.0
+margin_bottom = 14.0
+text = "Music Volume"
+
+[node name="HSlider" type="HSlider" parent="musicVolume"]
+margin_top = 18.0
+margin_right = 1024.0
+margin_bottom = 34.0
+focus_mode = 0
+max_value = 1.0
+step = 0.05
+value = 0.15

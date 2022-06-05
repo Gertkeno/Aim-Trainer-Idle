@@ -9,24 +9,11 @@ original links and attribution.
 
 # The Big Todo
 
-- [x] Sort purchasable categories
-- [x] Sell account
-- [x] Purchasable UI
-	- [x] Draft
-	- [x] Create buttons from list
-	- [x] Buttons apply stat changes
 - [ ] Audio
 	- [ ] Gun sounds
 	- [ ] Headshot ding
 	- [ ] Kill/Gain money
 	- [ ] Music
-- [ ] Shooting
-	- [x] Aim-bot
-	- [ ] Aim-bot toggle
-	- [x] Manual
-	- [x] Cross hair
-	- [x] Editable stats
-	- [x] Muzzle flash and kick back
 - [ ] Enemies
 	- [x] Model and Animation
 	- [x] can be shot
@@ -37,12 +24,25 @@ original links and attribution.
 	- [ ] Death effects
 	- [ ] Editable stats
 - [ ] Stats
-	- [x] Fire rate
-	- [ ] Enemy spawn rate
 	- [ ] Bullet magnetism
+	- [x] Fire rate
+	- [x] Enemy spawn rate
 	- [x] Dosh per kill
 	- [x] Dosh per head shot
 	- [x] aim-bot speed
 - [x] Economy
 	- [x] Get money
 	- [x] Spend money
+- [x] Sort purchasable categories
+- [x] Sell account
+- [x] Purchasable UI
+	- [x] Draft
+	- [x] Create buttons from list
+	- [x] Buttons apply stat changes
+- [x] Shooting
+	- [x] Aim-bot toggle
+	- [x] Aim-bot
+	- [x] Manual
+	- [x] Cross hair
+	- [x] Editable stats
+	- [x] Muzzle flash and kick back

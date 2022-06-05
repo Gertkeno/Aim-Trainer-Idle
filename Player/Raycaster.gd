@@ -143,3 +143,15 @@ func _on_MashingFire_timeout() -> void:
 			_start_aimbot()
 	else:
 		mashingTimer.stop()
+
+func _on_Autofire_toggled(button_pressed: bool) -> void:
+	if button_pressed and not aimbotting:
+		aimbotting = true
+		ray.enabled = true
+		_start_aimbot()
+		mashingTimer.wait_time = get_fire_delay()
+		mashingTimer.start()
+	elif not button_pressed and aimbotting:
+		aimbotting = false
+		ray.enabled = false
+		tween.remove_all()

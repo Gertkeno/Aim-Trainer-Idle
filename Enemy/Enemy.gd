@@ -27,7 +27,3 @@ func set_dead(value: float):
 	add_child(text)
 	self.visible = false
 	Stats.playerXP += value
-
-
-func _process(_delta):
-	pass
