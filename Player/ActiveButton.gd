@@ -19,7 +19,15 @@ func _set_purchasable() -> void:
 func update_text() -> void:
 	($Label as Label).text = displayName + "\n$" + str(round(cost))
 
-func update_all_buttons() -> void:
+func _set_fill() -> void:
+	var t := timer.time_left / timer.wait_time
+	($Panel as Panel).anchor_right = t
+
+func _process(_delta: float) -> void:
+	if not Engine.editor_hint:
+		_set_fill()
+
+func _update_all_buttons() -> void:
 	for i in get_tree().get_nodes_in_group("purchaseableButton"):
 		var b := i as Purchaseable
 		assert(b != null)
@@ -28,12 +36,14 @@ func update_all_buttons() -> void:
 func _on_Button_pressed():
 	if Stats.playerDosh >= cost and timer.is_stopped():
 		Stats.playerDosh -= cost
-		Stats.set(statName, Stats.get(statName) + bonusValue)
-		update_all_buttons()
+		for stat in statName.split(','):
+			Stats.set(stat, Stats.get(stat) + bonusValue)
+		_update_all_buttons()
 		timer.start()
 		_set_purchasable()
 
 func _on_Timer_timeout() -> void:
-	Stats.set(statName, Stats.get(statName) - bonusValue)
-	update_all_buttons()
+	for stat in statName.split(','):
+		Stats.set(stat, Stats.get(stat) - bonusValue)
+	_update_all_buttons()
 	_set_purchasable()
