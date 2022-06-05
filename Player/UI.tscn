@@ -295,6 +295,7 @@ currencyPostfix = "XP"
 margin_left = 215.0
 margin_right = 371.0
 margin_bottom = 54.0
+hint_tooltip = "Sell your account for real dosh dollars to a rando online."
 focus_mode = 0
 disabled = true
 text = "Sell Account: $0"
