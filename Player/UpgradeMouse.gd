@@ -1,8 +1,6 @@
 extends Button
 
 
-signal mouse_upgraded
-
 export(Array, Texture) var textures: Array
 onready var textureR := $TextureRect as TextureRect
 var index = 0
@@ -15,7 +13,7 @@ func _on_Button_pressed() -> void:
 	
 	if index < textures.size() - 1:
 		index += 1
-		emit_signal("mouse_upgraded")
 		textureR.texture = textures[index]
+		Stats.
 	else:
 		index += 0
