@@ -99,7 +99,7 @@ size_flags_vertical = 1
 statName = "headshotChance"
 displayName = "Aimbot Headshot %"
 baseCost = 30.0
-costScalingRate = 1.04
+costScalingRate = 1.07
 bonusValue = 5.0
 
 [node name="Button6" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
@@ -108,9 +108,8 @@ margin_bottom = 548.0
 size_flags_vertical = 1
 statName = "aimSpeed"
 displayName = "Aimbot Speed"
-baseCost = 50.0
-costScalingRate = 1.04
-bonusValue = 0.2
+baseCost = 10.0
+costScalingRate = 1.07
 
 [node name="Upgrade Panel 2" type="Control" parent="."]
 self_modulate = Color( 0, 1, 0.129412, 1 )
@@ -316,6 +315,7 @@ align = 2
 
 [node name="Crosshair" parent="." instance=ExtResource( 8 )]
 
+[connection signal="purchased" from="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button2" to="Crosshair" method="_on_Button2_purchased"]
 [connection signal="pressed" from="Mouse Panel/Button" to="Mouse Panel/Button" method="_on_Button_pressed"]
 [connection signal="toggled" from="Settings/CheckBox" to="Settings" method="_on_CheckBox_toggled"]
 [connection signal="pressed" from="Settings/Money/Sell Account" to="Settings/Money/Sell Account" method="sell_account"]
