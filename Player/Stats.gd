@@ -20,6 +20,7 @@ var playerXP: float = 0 setget set_player_xp
 var totalPurchases: int = 0
 var totalDosh: int = 0
 var playerDosh: float = 0
+var discountValue: float = 0
 
 signal xpChanged
 func set_player_xp(v: float) -> void:
