@@ -1,7 +1,7 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/programmerArt/mouse.png" type="Texture" id=1]
-[ext_resource path="res://assets/programmerArt/hand.png" type="Texture" id=2]
+[ext_resource path="res://assets/mice/computer-mouse-g2cc9bf215_1280.jpg" type="Texture" id=2]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/ui_theme.tres" type="Theme" id=4]
 [ext_resource path="res://Player/DoshCounter.gd" type="Script" id=5]
@@ -11,7 +11,15 @@
 [ext_resource path="res://Player/SellAccountButton.gd" type="Script" id=9]
 [ext_resource path="res://Player/VolumeSettings.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Player/SettingToggle.gd" type="Script" id=11]
-[ext_resource path="res://assets/Audio/sell_account.mp3" type="AudioStream" id=12]
+[ext_resource path="res://Player/UpgradeMouse.gd" type="Script" id=12]
+[ext_resource path="res://assets/mice/computer-mouse-gec6f84ec6_1280.png" type="Texture" id=13]
+[ext_resource path="res://assets/mice/mouse-screen-2-1242739.jpg" type="Texture" id=14]
+[ext_resource path="res://assets/mice/7178116658_886602e631_b.jpg" type="Texture" id=15]
+[ext_resource path="res://assets/Audio/sell_account.mp3" type="AudioStream" id=16]
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/hand.png-d2619a979ad1564d34c345ff6b48093c.stex"
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -155,6 +163,9 @@ margin_top = -0.0640001
 margin_right = -0.0960083
 margin_bottom = -0.0160065
 focus_mode = 0
+action_mode = 0
+script = ExtResource( 12 )
+textures = [ ExtResource( 15 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 2 ) ]
 
 [node name="TextureRect" type="TextureRect" parent="Mouse Panel/Button"]
 anchor_left = 0.043
@@ -197,7 +208,7 @@ margin_left = 0.0879998
 margin_top = -0.04
 margin_right = -0.0879974
 margin_bottom = 0.0399933
-texture = ExtResource( 2 )
+texture = SubResource( 2 )
 expand = true
 
 [node name="Aimtrain Panel" type="Control" parent="."]
@@ -274,7 +285,7 @@ script = ExtResource( 9 )
 minimumPurchases = 10
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Settings/Money/Sell Account"]
-stream = ExtResource( 12 )
+stream = ExtResource( 16 )
 bus = "uiVolume"
 
 [node name="dosh" type="Label" parent="Settings/Money"]
@@ -304,6 +315,7 @@ text = "Aimbot"
 align = 2
 
 [connection signal="purchased" from="Upgrade Panel 1/ScrollContainer/VBoxContainer/Button2" to="Crosshair" method="_on_Button2_purchased"]
+[connection signal="pressed" from="Mouse Panel/Button" to="Mouse Panel/Button" method="_on_Button_pressed"]
 [connection signal="toggled" from="Settings/CheckBox" to="Settings" method="_on_CheckBox_toggled"]
 [connection signal="pressed" from="Settings/Money/Sell Account" to="Settings/Money/Sell Account" method="sell_account"]
 [connection signal="toggled" from="Settings/Control2/Autofire" to="Aimtrain Panel/ViewportContainer/Viewport/Player" method="_on_Autofire_toggled"]
