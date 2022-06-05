@@ -22,7 +22,7 @@ margin_right = 1024.0
 margin_bottom = 34.0
 focus_mode = 0
 max_value = 1.0
-step = 0.05
+step = 0.02
 value = 0.1
 
 [node name="uiVolume" type="VBoxContainer" parent="."]
@@ -41,7 +41,7 @@ margin_right = 1024.0
 margin_bottom = 34.0
 focus_mode = 0
 max_value = 1.0
-step = 0.05
+step = 0.02
 value = 0.1
 
 [node name="musicVolume" type="VBoxContainer" parent="."]
@@ -60,5 +60,5 @@ margin_right = 1024.0
 margin_bottom = 34.0
 focus_mode = 0
 max_value = 1.0
-step = 0.05
+step = 0.02
 value = 0.15
