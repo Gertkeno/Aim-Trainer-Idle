@@ -48,6 +48,7 @@ func sell_account() -> void:
 				b.update_text()
 		emit_signal("account_sold", potentialWorth)
 		_set_text()
+		($AudioStreamPlayer as AudioStreamPlayer).play()
 
 func get_account_worth() -> float:
 	return max(0, (Stats.totalPurchases - minimumPurchases) / doshPerPurchases)

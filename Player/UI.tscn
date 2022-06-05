@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Player/ActiveButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/mice/computer-mouse-g2cc9bf215_1280.jpg" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://assets/mice/computer-mouse-gec6f84ec6_1280.png" type="Texture" id=13]
 [ext_resource path="res://assets/mice/mouse-screen-2-1242739.jpg" type="Texture" id=14]
 [ext_resource path="res://assets/mice/7178116658_886602e631_b.jpg" type="Texture" id=15]
+[ext_resource path="res://assets/Audio/sell_account.mp3" type="AudioStream" id=16]
 
 [sub_resource type="StreamTexture" id=2]
 flags = 4
@@ -282,6 +283,10 @@ disabled = true
 text = "Sell Account: $0"
 script = ExtResource( 9 )
 minimumPurchases = 10
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Settings/Money/Sell Account"]
+stream = ExtResource( 16 )
+bus = "uiVolume"
 
 [node name="dosh" type="Label" parent="Settings/Money"]
 margin_left = 375.0
