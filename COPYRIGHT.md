@@ -7,3 +7,4 @@
 - [Fonts](https://godotengine.org/asset-library/asset/316 "MIT") By dalton5000
 - [explosion_13.png](https://opengameart.org/content/fire-explosion "CC0")
 - [Knife](https://opengameart.org/content/iron-knife "CC0") By Clint Bellanger
+- [Trackpad photo](https://www.flickr.com/photos/adafruit/)

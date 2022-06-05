@@ -296,7 +296,6 @@ focus_mode = 0
 disabled = true
 text = "Sell Account: $0"
 script = ExtResource( 9 )
-minimumPurchases = 10
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Settings/Money/Sell Account"]
 stream = ExtResource( 16 )
