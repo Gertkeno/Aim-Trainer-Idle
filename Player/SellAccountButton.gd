@@ -7,6 +7,8 @@ var resetStatNames: Array = [
 	"targetWorth",
 	"respawnTime",
 	"totalPurchases",
+	"headshotChance",
+	"aimSpeed",
 ]
 var resetStatValues: Array = []
 var buttonStatBaseCosts: Array = []

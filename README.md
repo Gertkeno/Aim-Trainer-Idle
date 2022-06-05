@@ -9,12 +9,6 @@ original links and attribution.
 
 # The Big Todo
 
-- [ ] Audio
-	- [x] Gun sounds
-	- [x] Headshot ding
-	- [ ] Music
-	- [x] UI purchasable button
-	- [x] UI sell account
 - [ ] Enemies
 	- [x] Model and Animation
 	- [x] can be shot
@@ -31,6 +25,12 @@ original links and attribution.
 	- [x] Dosh per kill
 	- [x] Dosh per head shot
 	- [x] aim-bot speed
+- [ ] Audio
+	- [x] Gun sounds
+	- [x] Headshot ding
+	- [ ] Music
+	- [x] UI purchasable button
+	- [x] UI sell account
 - [x] Economy
 	- [x] Get money
 	- [x] Spend money
