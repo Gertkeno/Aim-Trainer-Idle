@@ -5,7 +5,7 @@ signal mouse_upgraded
 
 export(Array, Texture) var textures: Array
 onready var textureR := $TextureRect as TextureRect
-var index = -1
+var index = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

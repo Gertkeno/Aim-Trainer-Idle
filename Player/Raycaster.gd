@@ -10,6 +10,7 @@ onready var gunPivot := $GunPivot as Spatial
 onready var ray := $GunPivot/AK/RayCast as RayCast
 onready var mashingTimer := $Aimbot/MashingFire as Timer
 onready var gunshotSound := $AudioStreamPlayer as GunshotRoundRobin
+onready var crosshair := $Crosshair as Node2D
 var shootCooldown: float = 1 / Stats.fireDelay
 
 func get_fire_delay() -> float:
@@ -156,7 +157,7 @@ func _on_MashingFire_timeout() -> void:
 func _on_Autofire_toggled(button_pressed: bool) -> void:
 	if button_pressed and not aimbotting:
 		aimbotting = true
-		ray.enabled = true
+		ray.enabled = true		
 		_start_aimbot()
 		mashingTimer.wait_time = get_fire_delay()
 		mashingTimer.start()
@@ -164,3 +165,7 @@ func _on_Autofire_toggled(button_pressed: bool) -> void:
 		aimbotting = false
 		ray.enabled = false
 		tween.remove_all()
+	if Input.get_mouse_mode() == Input.MOUSE_MODE_HIDDEN:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	else:
+		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)

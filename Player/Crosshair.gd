@@ -8,7 +8,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	self.position = self.get_global_mouse_position()
+	if Input.get_mouse_mode() == Input.MOUSE_MODE_HIDDEN:
+		self.position = self.get_global_mouse_position()
 
 func _input(event: InputEvent) -> void:
 	var highFrame := sprite.hframes * sprite.vframes - 1
