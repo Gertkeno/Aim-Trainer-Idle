@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/Material_001.material" type="Material" id=1]
 [ext_resource path="res://assets/AK/GLTF/AkMaterial.material" type="Material" id=2]
 [ext_resource path="res://assets/AK/Scenes/AK.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/iron_knife.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Enemy/Enemy.gd" type="Script" id=5]
 
 [sub_resource type="SpatialMaterial" id=8]
@@ -359,7 +360,7 @@ mesh = SubResource( 1 )
 material/0 = ExtResource( 1 )
 
 [node name="rhandAttachment" type="BoneAttachment" parent="MaleArm2"]
-transform = Transform( 0.0399966, 0.0747458, 0.996401, 0.0747465, 0.99418, -0.0775795, -0.9964, 0.07758, 0.0341771, -1.4362, -0.197405, 0.223978 )
+transform = Transform( -0.759085, 0.276607, -0.589302, 0.588536, -0.0953043, -0.802835, -0.278232, -0.956245, -0.0904495, -0.396149, 0.222718, 0.860958 )
 bone_name = "Hand.Right"
 
 [node name="AK2" parent="MaleArm2/rhandAttachment" instance=ExtResource( 3 )]
@@ -367,8 +368,15 @@ transform = Transform( 0.139463, 0.13936, 1.99027, 0.114614, 1.99127, -0.147458,
 mesh = SubResource( 5 )
 skeleton = NodePath("../../..")
 
+[node name="lhandAttachment" type="BoneAttachment" parent="MaleArm2"]
+transform = Transform( -0.868119, 0.114308, 0.483014, -0.407317, 0.39206, -0.824852, -0.283659, -0.91281, -0.293795, 0.486476, 0.31255, 0.995701 )
+bone_name = "Hand.Left"
+
+[node name="iron_knife" parent="MaleArm2/lhandAttachment" instance=ExtResource( 4 )]
+transform = Transform( 0.402456, 1.10636, 0.102106, -0.365808, 0.361068, -1.26464, -1.15688, 0.505524, 0.507443, 0.0203096, 0.205338, -0.275349 )
+
 [node name="headAttachment" type="BoneAttachment" parent="MaleArm2"]
-transform = Transform( 1, -2.53932e-07, 2.39365e-08, 2.52401e-07, 0.995586, -0.0938477, 5.22588e-08, 0.0938477, 0.995586, -7.4506e-08, -0.104009, 0.0804215 )
+transform = Transform( 1, -2.53931e-07, 5.22774e-08, 2.55059e-07, 0.995586, -0.0938477, 2.40428e-08, 0.0938477, 0.995586, 0.0311202, -0.12116, 0.0525497 )
 bone_name = "Head"
 
 [node name="AK2" parent="MaleArm2/headAttachment" instance=ExtResource( 3 )]
@@ -377,7 +385,7 @@ mesh = SubResource( 5 )
 skeleton = NodePath("../../..")
 
 [node name="hipAttachment" type="BoneAttachment" parent="MaleArm2"]
-transform = Transform( 1, -4.83169e-13, -4.2189e-15, -2.27363e-11, -0.999963, -0.00864668, -2.61115e-09, 0.00864668, -0.999963, 2.98023e-08, -0.117338, 0.808219 )
+transform = Transform( 1, 7.02983e-10, 1.59185e-08, 8.18345e-10, -0.999963, -0.00864669, 1.33006e-08, 0.00864669, -0.999963, 0.043524, -0.116341, 0.75549 )
 bone_name = "Hip"
 
 [node name="AK" parent="MaleArm2/hipAttachment" instance=ExtResource( 3 )]
