@@ -9,6 +9,7 @@ onready var tween := $Aimbot as Tween
 onready var gunPivot := $GunPivot as Spatial
 onready var ray := $GunPivot/AK/RayCast as RayCast
 onready var mashingTimer := $Aimbot/MashingFire as Timer
+onready var gunshotSound := $AudioStreamPlayer as GunshotRoundRobin
 var shootCooldown: float = 1 / Stats.fireDelay
 
 func get_fire_delay() -> float:
@@ -25,6 +26,9 @@ func _hit_enemy(hitbox: KinematicBody) -> bool:
 	var value: float = Stats.targetWorth
 	if hitbox.get_name() == "Head":
 		value *= Stats.headshotMultiplier
+		gunshotSound.set_gunshot_hit("head")
+	else:
+		gunshotSound.set_gunshot_hit("body")
 
 	enemy.set_dead(value)
 	return true
@@ -99,9 +103,9 @@ func _process(delta: float) -> void:
 	shootCooldown += delta
 	if Input.is_action_pressed("Fire") and shootCooldown > get_fire_delay():
 		if not intersection.empty():
-			if _hit_enemy(intersection.collider):
-				# do Juicy Fx
-				pass
+			_hit_enemy(intersection.collider)
+		else:
+			gunshotSound.set_gunshot_hit("miss")
 		shootCooldown = 0
 		fire_fx()
 
@@ -133,14 +137,19 @@ func _get_gun_hit() -> Enemy:
 func _on_MashingFire_timeout() -> void:
 	if aimbotting:
 		mashingTimer.wait_time = get_fire_delay()
-		fire_fx()
 		var hit := _get_gun_hit()
 		if hit != null:
 			var worth := Stats.targetWorth
 			if randi() % 100 <= Stats.headshotChance:
 				worth *= Stats.headshotMultiplier
+				gunshotSound.set_gunshot_hit("head")
+			else:
+				gunshotSound.set_gunshot_hit("body")
 			hit.set_dead(worth)
 			_start_aimbot()
+		else:
+			gunshotSound.set_gunshot_hit("miss")
+		fire_fx()
 	else:
 		mashingTimer.stop()
 

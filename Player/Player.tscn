@@ -1,8 +1,24 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Player/Raycaster.gd" type="Script" id=1]
 [ext_resource path="res://assets/AK/Scenes/AK.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/explosion_13.png" type="Texture" id=3]
+[ext_resource path="res://assets/Audio/gunshot_miss_01.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Player/GunSoundsRoundRobin.gd" type="Script" id=5]
+[ext_resource path="res://assets/Audio/gunshot_bodyshot_02.mp3" type="AudioStream" id=6]
+[ext_resource path="res://assets/Audio/gunshot_headshot_05.mp3" type="AudioStream" id=7]
+[ext_resource path="res://assets/Audio/gunshot_headshot_02.mp3" type="AudioStream" id=8]
+[ext_resource path="res://assets/Audio/gunshot_headshot_01.mp3" type="AudioStream" id=9]
+[ext_resource path="res://assets/Audio/gunshot_headshot_03.mp3" type="AudioStream" id=10]
+[ext_resource path="res://assets/Audio/gunshot_miss_02.mp3" type="AudioStream" id=11]
+[ext_resource path="res://assets/Audio/gunshot_miss_04.mp3" type="AudioStream" id=12]
+[ext_resource path="res://assets/Audio/gunshot_miss_03.mp3" type="AudioStream" id=13]
+[ext_resource path="res://assets/Audio/gunshot_miss_05.mp3" type="AudioStream" id=14]
+[ext_resource path="res://assets/Audio/gunshot_headshot_04.mp3" type="AudioStream" id=15]
+[ext_resource path="res://assets/Audio/gunshot_bodyshot_03.mp3" type="AudioStream" id=16]
+[ext_resource path="res://assets/Audio/gunshot_bodyshot_04.mp3" type="AudioStream" id=17]
+[ext_resource path="res://assets/Audio/gunshot_bodyshot_01.mp3" type="AudioStream" id=18]
+[ext_resource path="res://assets/Audio/gunshot_bodyshot_05.mp3" type="AudioStream" id=19]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Fire"
@@ -50,6 +66,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Vector3( 0, 90, 0 ), Vector3( -8.624, 90, -7.59679e-07 ), Vector3( 0, 90, 0 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("../AudioStreamPlayer:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -64,6 +92,18 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector3( 0, 90, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../AudioStreamPlayer:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
 }
 
 [node name="Player" type="Spatial"]
@@ -113,6 +153,14 @@ omni_range = 0.822276
 one_shot = true
 
 [node name="MashingFire" type="Timer" parent="Aimbot"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+bus = "gunshotVolume"
+script = ExtResource( 5 )
+body = [ ExtResource( 18 ), ExtResource( 6 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 19 ) ]
+miss = [ ExtResource( 4 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 14 ) ]
+head = [ ExtResource( 9 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 7 ) ]
 
 [connection signal="tween_all_completed" from="Aimbot" to="." method="_on_Aimbot_tween_all_completed"]
 [connection signal="timeout" from="Aimbot/Retry" to="." method="_on_Retry_timeout"]
