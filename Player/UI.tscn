@@ -110,6 +110,7 @@ statName = "aimSpeed"
 displayName = "Aimbot Speed"
 baseCost = 10.0
 costScalingRate = 1.07
+bonusValue = 0.8
 
 [node name="Upgrade Panel 2" type="Control" parent="."]
 self_modulate = Color( 0, 1, 0.129412, 1 )
@@ -141,9 +142,9 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 177.0
 margin_bottom = 88.0
-statName = "targetWorth"
+statName = "targetWorth,headshotMultiplier"
 displayName = "Mountain Dew"
-bonusValue = 20.0
+bonusValue = 3.0
 cost = 2.0
 
 [node name="Button2" parent="Upgrade Panel 2/ScrollContainer/VBoxContainer" instance=ExtResource( 1 )]
