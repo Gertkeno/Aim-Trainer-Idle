@@ -10,7 +10,6 @@ onready var gunPivot := $GunPivot as Spatial
 onready var ray := $GunPivot/AK/RayCast as RayCast
 onready var mashingTimer := $Aimbot/MashingFire as Timer
 onready var gunshotSound := $AudioStreamPlayer as GunshotRoundRobin
-onready var crosshair := $Crosshair as Node2D
 var shootCooldown: float = 1 / Stats.fireDelay
 
 func get_fire_delay() -> float:
