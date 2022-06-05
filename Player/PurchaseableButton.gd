@@ -3,8 +3,6 @@ extends Button
 
 class_name Purchaseable
 
-enum CostScaling {linear, exponential}
-
 export var statName: String
 export var displayName: String
 export (int, "XP", "Dosh") var costType: int = 0
@@ -12,6 +10,8 @@ export var baseCost: float = 1
 export (int, "linear", "exponential") var costScalingType: int = 1
 export var costScalingRate: float = 1.7
 export var bonusValue: float = 1
+
+onready var streamer := $AudioStreamPlayer as AudioStreamPlayer
 
 signal purchased(statName)
 
@@ -43,6 +43,8 @@ func _on_Button_pressed() -> void:
 
 	emit_signal("purchased", statName)
 
+	if not streamer.playing:
+		streamer.play()
 	Stats.set(statName, Stats.get(statName) + bonusValue)
 	Stats.totalPurchases += 1
 

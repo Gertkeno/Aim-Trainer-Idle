@@ -14,7 +14,8 @@ original links and attribution.
 	- [x] Headshot ding
 	- [ ] Kill/Gain money
 	- [ ] Music
-	- [ ] UI sounds
+	- [x] UI purchasable button
+	- [ ] UI sell account
 - [ ] Enemies
 	- [x] Model and Animation
 	- [x] can be shot

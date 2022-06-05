@@ -2,7 +2,7 @@ extends Node
 
 # Hand
 var headshotMultiplier: float = 1.1
-var fireDelay: float = 2
+var fireDelay: float = 1
 
 # Aim bot
 var aimSpeed: float = 1
