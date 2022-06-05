@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/click_light.mp3-81fa55ceb079367caeb1cedf10b39abd.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/click_light.mp3"
+dest_files=[ "res://.import/click_light.mp3-81fa55ceb079367caeb1cedf10b39abd.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
