@@ -13,7 +13,7 @@ var resetStatNames: Array = [
 var resetStatValues: Array = []
 var buttonStatBaseCosts: Array = []
 
-export(int, 0, 100) var minimumPurchases = 2
+export(int, 0, 100) var minimumPurchases = 8
 export(int, 1, 50) var doshPerPurchases = 3
 
 signal account_sold
@@ -53,7 +53,8 @@ func sell_account() -> void:
 		($AudioStreamPlayer as AudioStreamPlayer).play()
 
 func get_account_worth() -> float:
-	return max(0, (Stats.totalPurchases - minimumPurchases) / doshPerPurchases)
+	var output: float = max(0, (Stats.totalPurchases - minimumPurchases) / doshPerPurchases)
+	return floor(output * output/3)
 
 func _set_text() -> void:
 	var worth := get_account_worth()

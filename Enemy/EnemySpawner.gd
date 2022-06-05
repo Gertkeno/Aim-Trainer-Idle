@@ -35,29 +35,19 @@ func _ready():
 		add_child(enemy)
 		enemies.append(enemy)
 
-	timer.start(4 / Stats.respawnTime)
+	timer.start(3 / Stats.respawnTime)
 
 func get_random_location():
 	randomize()
 	return locations[randi() % locations.size()]
 
 func show_random_enemies(num: int):
-
 	randomize()
-
 	for _i in range(0,num):
 		var enemy := enemies[randi() % enemies.size()] as Enemy
 		enemy.set_translation(get_random_location())
 		enemy.rotation_degrees.y = randi() % 360
 		enemy.respawn()
-
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("Spacebar"):
-		show_random_enemies(1)
-	#if event.is_action_released("Fire"):
-	#	for i in enemies:
-	#		if !i.is_visible_in_tree() && timer.is_stopped():
-	#			timer.start(Stats.respawnTime)
 
 func _on_RespawnTimer_timeout():
 	for i in enemies:
@@ -67,4 +57,4 @@ func _on_RespawnTimer_timeout():
 			i.rotation_degrees.y = randi() % 360
 			i.respawn()
 			break
-	timer.wait_time = 4 / Stats.respawnTime
+	timer.wait_time = 3 / Stats.respawnTime
