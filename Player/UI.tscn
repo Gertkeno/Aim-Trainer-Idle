@@ -88,6 +88,7 @@ bonusValue = 0.1
 [node name="Button3" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
 margin_top = 276.0
 margin_bottom = 364.0
+hint_tooltip = "Increases bonus experience from headshots."
 size_flags_vertical = 1
 statName = "headshotMultiplier"
 displayName = "Stronger Clicks"
@@ -144,7 +145,7 @@ size_flags_horizontal = 3
 [node name="Button" parent="Upgrade Panel 2/ScrollContainer/VBoxContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 176.0
+margin_right = 175.0
 margin_bottom = 88.0
 hint_tooltip = "Drink mountain dew to increase cash flow from sick gamer trick shots"
 statName = "targetWorth,headshotMultiplier"
@@ -156,7 +157,7 @@ cost = 2.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 92.0
-margin_right = 176.0
+margin_right = 175.0
 margin_bottom = 180.0
 hint_tooltip = "Take an addy to improve aimbotting skills and fire rate"
 statName = "fireDelay,aimSpeed"
