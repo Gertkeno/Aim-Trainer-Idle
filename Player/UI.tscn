@@ -110,6 +110,7 @@ bonusValue = 5.0
 [node name="Button6" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
 margin_top = 460.0
 margin_bottom = 548.0
+hint_tooltip = "Increase aimbotting target acquisition speed."
 size_flags_vertical = 1
 statName = "aimSpeed"
 displayName = "Faster Scripts"
@@ -301,6 +302,7 @@ currencyPostfix = "XP"
 margin_left = 215.0
 margin_right = 371.0
 margin_bottom = 54.0
+hint_tooltip = "Sell your account for real dosh dollars to a rando online."
 focus_mode = 0
 disabled = true
 text = "Sell Account: $0"
