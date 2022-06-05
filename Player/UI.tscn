@@ -69,7 +69,7 @@ statName = "respawnTime"
 displayName = "Faster Enemy Spawn"
 baseCost = 10.0
 costScalingRate = 1.5
-bonusValue = 0.0
+bonusValue = 0.2
 
 [node name="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
 margin_top = 184.0
@@ -98,9 +98,9 @@ margin_bottom = 456.0
 size_flags_vertical = 1
 statName = "headshotChance"
 displayName = "Aimbot Headshot %"
-costScalingType = 0
-costScalingRate = 1.0
-bonusValue = 2.0
+baseCost = 30.0
+costScalingRate = 1.04
+bonusValue = 5.0
 
 [node name="Button6" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
 margin_top = 460.0
@@ -108,9 +108,9 @@ margin_bottom = 548.0
 size_flags_vertical = 1
 statName = "aimSpeed"
 displayName = "Aimbot Speed"
-costScalingType = 0
-costScalingRate = 1.0
-bonusValue = 0.5
+baseCost = 50.0
+costScalingRate = 1.04
+bonusValue = 0.2
 
 [node name="Upgrade Panel 2" type="Control" parent="."]
 self_modulate = Color( 0, 1, 0.129412, 1 )
@@ -141,7 +141,7 @@ size_flags_horizontal = 3
 margin_right = 177.0
 statName = "targetWorth"
 displayName = "Mountain Dew"
-bonusValue = "5"
+bonusValue = 5.0
 cost = 2.0
 
 [node name="Mouse Panel" type="Control" parent="."]
