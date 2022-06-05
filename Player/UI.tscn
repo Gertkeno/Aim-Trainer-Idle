@@ -71,7 +71,6 @@ displayName = "Faster Enemy Spawn"
 baseCost = 10.0
 costScalingRate = 1.5
 bonusValue = 0.0
-bonusScaler = 0.95
 
 [node name="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
 margin_top = 184.0

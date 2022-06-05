@@ -35,7 +35,7 @@ func _ready():
 		add_child(enemy)
 		enemies.append(enemy)
 
-	timer.start(Stats.respawnTime)
+	timer.start(4 / Stats.respawnTime)
 
 func get_random_location():
 	randomize()
@@ -67,4 +67,4 @@ func _on_RespawnTimer_timeout():
 			i.rotation_degrees.y = randi() % 360
 			i.respawn()
 			break
-	timer.wait_time = Stats.respawnTime
+	timer.wait_time = 4 / Stats.respawnTime

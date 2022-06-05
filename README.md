@@ -10,10 +10,12 @@ original links and attribution.
 # The Big Todo
 
 - [ ] Audio
-	- [ ] Gun sounds
-	- [ ] Headshot ding
+	- [x] Gun sounds
+	- [x] Headshot ding
 	- [ ] Kill/Gain money
 	- [ ] Music
+	- [x] UI purchasable button
+	- [ ] UI sell account
 - [ ] Enemies
 	- [x] Model and Animation
 	- [x] can be shot
