@@ -19,7 +19,7 @@ func _ready() -> void:
 	Stats.connect("xpChanged", self, "_set_purchasable")
 
 func _set_purchasable() -> void:
-	self.disabled = Stats.playerXP < self.baseCost
+	self.disabled = Stats.playerXP < (self.baseCost * Stats.discountValue)
 
 func update_text() -> void:
 	var discount: float = 1

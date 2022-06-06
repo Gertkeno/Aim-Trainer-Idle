@@ -70,7 +70,8 @@ size_flags_vertical = 1
 statName = "respawnTime"
 displayName = "More Enemies"
 baseCost = 10.0
-costScalingRate = 1.5
+costScalingType = 0
+costScalingRate = 5.0
 bonusValue = 0.2
 
 [node name="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
@@ -105,7 +106,7 @@ statName = "headshotChance"
 displayName = "Smarter Scripts"
 baseCost = 30.0
 costScalingRate = 1.07
-bonusValue = 5.0
+bonusValue = 2.0
 
 [node name="Button6" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
 margin_top = 460.0
@@ -114,9 +115,9 @@ hint_tooltip = "Increase aimbotting target acquisition speed."
 size_flags_vertical = 1
 statName = "aimSpeed"
 displayName = "Faster Scripts"
-baseCost = 10.0
-costScalingRate = 1.07
-bonusValue = 0.8
+baseCost = 40.0
+costScalingRate = 1.1
+bonusValue = 0.2
 
 [node name="Upgrade Panel 2" type="Control" parent="."]
 self_modulate = Color( 0, 1, 0.129412, 1 )
