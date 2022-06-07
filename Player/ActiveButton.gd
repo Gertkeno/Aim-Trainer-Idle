@@ -1,6 +1,8 @@
 tool
 extends Button
 
+class_name ActiveButton
+
 export var statName: String
 export var displayName: String
 export var bonusValue: float
@@ -41,9 +43,14 @@ func _on_Button_pressed():
 		_update_all_buttons()
 		timer.start()
 		_set_purchasable()
+		($AudioStreamPlayer as AudioStreamPlayer).play()
 
 func _on_Timer_timeout() -> void:
 	for stat in statName.split(','):
 		Stats.set(stat, Stats.get(stat) - bonusValue)
 	_update_all_buttons()
 	_set_purchasable()
+
+func force_reset():
+	timer.stop()
+	#timer.time_left = 0

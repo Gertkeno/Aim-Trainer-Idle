@@ -71,7 +71,7 @@ statName = "respawnTime"
 displayName = "More Enemies"
 baseCost = 10.0
 costScalingType = 0
-costScalingRate = 5.0
+costScalingRate = 8.0
 bonusValue = 0.2
 
 [node name="Button" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
@@ -83,7 +83,7 @@ statName = "fireDelay"
 displayName = "Faster Clicks"
 baseCost = 12.0
 costScalingType = 0
-costScalingRate = 2.0
+costScalingRate = 4.0
 bonusValue = 0.1
 
 [node name="Button3" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
@@ -105,7 +105,7 @@ size_flags_vertical = 1
 statName = "headshotChance"
 displayName = "Smarter Scripts"
 baseCost = 30.0
-costScalingRate = 1.07
+costScalingRate = 1.08
 bonusValue = 2.0
 
 [node name="Button6" parent="Upgrade Panel 1/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
@@ -141,7 +141,7 @@ scroll_horizontal_enabled = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Upgrade Panel 2/ScrollContainer"]
 margin_right = 176.0
-margin_bottom = 180.0
+margin_bottom = 272.0
 size_flags_horizontal = 3
 
 [node name="Button" parent="Upgrade Panel 2/ScrollContainer/VBoxContainer" instance=ExtResource( 1 )]
@@ -166,6 +166,18 @@ statName = "fireDelay,aimSpeed"
 displayName = "Adderal"
 bonusValue = 6.0
 cost = 5.0
+
+[node name="Button3" parent="Upgrade Panel 2/ScrollContainer/VBoxContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 184.0
+margin_right = 175.0
+margin_bottom = 272.0
+hint_tooltip = "Fill the game with enemies with a deep sip of evil juice."
+statName = "respawnTime"
+displayName = "Evil Juice"
+bonusValue = 100.0
+cost = 7.0
 
 [node name="Mouse Panel" type="Control" parent="."]
 self_modulate = Color( 0, 1, 0.129412, 1 )

@@ -37,6 +37,12 @@ func sell_account() -> void:
 	if potentialWorth > 0:
 		Stats.playerDosh += potentialWorth
 
+		var activeButtons := get_tree().get_nodes_in_group("activeButtons")
+		for button in activeButtons:
+			var b := button as ActiveButton
+			assert(b != null)
+			b.force_reset()
+
 		for i in resetStatNames.size():
 			Stats.set(resetStatNames[i], resetStatValues[i])
 
