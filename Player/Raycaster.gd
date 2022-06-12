@@ -15,11 +15,19 @@ var shootCooldown: float = 1 / Stats.fireDelay
 func get_fire_delay() -> float:
 	return 1 / Stats.fireDelay
 
+func _get_parent_enemy(node: Node) -> Enemy:
+	if node == null:
+		return null
+	elif node is Enemy:
+		return node as Enemy
+	else:
+		return _get_parent_enemy(node.get_parent())
+
 func _hit_enemy(hitbox: KinematicBody) -> bool:
 	if hitbox == null:
 		return false
 
-	var enemy := hitbox.get_parent() as Enemy
+	var enemy := _get_parent_enemy(hitbox)
 	if enemy == null or not enemy.visible:
 		return false
 

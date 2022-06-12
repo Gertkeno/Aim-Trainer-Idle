@@ -2,7 +2,7 @@ extends Spatial
 
 class_name Enemy
 
-export(PackedScene) var explosion: PackedScene
+export(PackedScene) var explosion: PackedScene = preload("res://Enemy/explosion.tscn")
 var floating_text := preload("res://Enemy/FloatingText.tscn")
 
 onready var head := $Head as KinematicBody

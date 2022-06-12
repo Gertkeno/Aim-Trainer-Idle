@@ -12,7 +12,7 @@ original links and attribution.
 - [ ] Enemies
 	- [x] Model and Animation
 	- [x] can be shot
-	- [ ] Maybe 3 Weapons
+	- [x] Maybe 3 Weapons
 	- [ ] Angry eyebrows
 	- [x] Spawn infinitely
 	- [ ] Movement
@@ -25,7 +25,7 @@ original links and attribution.
 	- [x] Dosh per kill
 	- [x] Dosh per head shot
 	- [x] aim-bot speed
-- [ ] Audio
+- [x] Audio
 	- [x] Gun sounds
 	- [x] Headshot ding
 	- [ ] Music
