@@ -18,7 +18,7 @@ var respawnTime: float = 1
 # Meta
 var playerXP: float = 0 setget set_player_xp
 var totalPurchases: int = 0
-var playerDosh: float = 99
+var playerDosh: float = 0
 var discountValue: float = 1
 
 signal xpChanged
