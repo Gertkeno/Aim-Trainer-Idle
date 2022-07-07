@@ -1,7 +1,7 @@
-[gd_resource type="Theme" load_steps=34 format=2]
+[gd_resource type="Theme" load_steps=33 format=2]
 
 [ext_resource path="res://assets/Themes/FlatUI/UIpack_vector.svg" type="Texture" id=1]
-[ext_resource path="res://assets/Themes/FlatUI/kenvector_future.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/Themes/Riffic.tres" type="DynamicFont" id=2]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 1 )
@@ -173,13 +173,8 @@ region = Rect2( 1007, 690, 39, 31 )
 texture = ExtResource( 1 )
 region_rect = Rect2( 1051, 317, 4, 100 )
 
-[sub_resource type="DynamicFont" id=31]
-use_mipmaps = true
-use_filter = true
-font_data = ExtResource( 2 )
-
 [resource]
-default_font = SubResource( 31 )
+default_font = ExtResource( 2 )
 Button/colors/font_color = Color( 0, 0, 0, 1 )
 Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 Button/colors/font_color_hover = Color( 0.34902, 0.34902, 0.34902, 1 )
